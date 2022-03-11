@@ -1,0 +1,19 @@
+.button {
+  border: none;
+
+  &.big-button {
+    padding: $but-b-pad;
+
+    background-color: $blue;
+    border-radius: 62px;
+  }
+
+  &.tools__login {
+    padding: $but-sm-pad;
+
+    background-color: $white;
+    border-radius: 28px;
+
+    box-shadow: 0px 0px 10px rgba($black, 0.1);
+  }
+}

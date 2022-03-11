@@ -1,0 +1,82 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Libre Franklin";
+  src: url("../assets/fonts/LibreFranklin-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Poppins";
+  src: url("../../../assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Bold.ttf");
+}
+
+.header {
+  &.header-1 {
+    font-size: $header-1;
+  }
+
+  &.header-2 {
+    font-size: $header-2;
+  }
+
+  &.header-3 {
+    font-size: $header-3;
+  }
+
+  &.header-4 {
+    font-size: $header-4;
+  }
+}
+
+.button {
+  font-family: "Libre Franklin";
+}
+
+.text-elem {
+  font-size: $text-des;
+  font-family: "Poppins";
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.link {
+  color: $black;
+  text-decoration: none;
+}
+
+.nav-item__link {
+  font-size: $text-nav-form;
+}
+
+.text-link {
+  font-size: $text-link;
+}
+
+.big-button {
+  font-size: $text-but-b;
+  color: $white;
+}
+
+.nav__tools * {
+    font-size: $text-tools;
+}

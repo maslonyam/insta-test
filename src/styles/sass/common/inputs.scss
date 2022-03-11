@@ -1,0 +1,18 @@
+.input {
+  box-sizing: border-box;
+  border: none;
+
+  &.tools__search {
+    width: $input-sm-w;
+    padding: 14px 38px;
+    border-radius: 28px;
+    box-shadow: 0px 0px 10px $blue;
+  }
+
+  &.login-form__input {
+    width: $input-big-w;
+    padding: 23px 48px;
+    background-color: $light-grey;
+    border-radius: 52px;
+  }
+}
