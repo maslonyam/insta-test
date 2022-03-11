@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/styles/style.css">
   <title>Company</title>
 </head>
-<body>
+<body class="body">
   <header class="header">
-    <a class="header__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+    <div class="container">
     <nav class="nav">
       <ul class="nav-list">
+        <li class="nav-item list-item">
+          <a class="header__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+        </li>
         <li class="nav-item list-item">
           <a class="nav-item__link link text-elem" href="#products">Products</a>
         </li>
@@ -50,29 +54,32 @@
             </li>
           </ul>
         </li>
-        <li class="nav-item__tools">
-          <button class="tools__login button">Log In</button>
-          <select class="tools__lang">
-            <option class="text-elem" value="en">English</option>
-            <option class="text-elem" value="ru">Russian</option>
-            <option class="text-elem" value="fr">French</option>
-            <option class="text-elem" value="de">Deutch</option>
-            <option class="text-elem" value="en">English</option>
-            <option class="text-elem" value="ru">Russian</option>
-          </select>
-          <input class="tools__search-button" type="checkbox"/>
-          <input class="tools__search input-elem text-elem" type="search" placeholder="Search">
-        </li>
       </ul>
+    </div>
+    <div class="nav__tools">
+      <button class="tools__login button">Log In</button>
+      <select class="tools__lang">
+        <option class="text-elem" value="en">English</option>
+        <option class="text-elem" value="ru">Russian</option>
+        <option class="text-elem" value="fr">French</option>
+        <option class="text-elem" value="de">Deutch</option>
+        <option class="text-elem" value="en">English</option>
+        <option class="text-elem" value="ru">Russian</option>
+      </select>
+      <input class="tools__search-button" type="checkbox"/>
+      <input class="tools__search input-elem text-elem" type="search" placeholder="Search">
+    </div>
     </nav>
   </header>
   <main class="main">
     <section class="intro" id="intro">
+      <div class="container">
       <h1 class="intro__header header-1 header text-elem">One app, all things money</h1>
       <p class="intro__description text-elem">Open a free account in minutes right from your phone, and make your money go further</p>
       <button class="intro__button button">Get Started <span class="intro__button-icon"></span></button>
     </section>
     <section class="login" id="login">
+      <div class="container">
       <header class="login-header">
         <a class="link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
       </header>
@@ -91,8 +98,11 @@
         <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
         <button class="login-form__button button">Registration</button>
       </form>
+      </div>
+    </div>
     </section>
     <section class="products" id="products">
+      <div class="container">
       <h2 class="products__header header header-2 text-elem">Product Specs</h2>
       <div class="products__slider">
         <ul class="slider__list">
@@ -114,8 +124,10 @@
         </div>
         <button class="controls__arrow arrow arrow-right"></button>
       </div>
+      </div>
     </section>
     <section class="about" id="about">
+      <div class="container">
       <h2 class="about__header header header-2 text-elem">GET YOUR SALARY A DAY EARLY</h2>
       <p class="about__description text-elem">You’ve earned it!</p>
       <ul class="about-benefits">
@@ -138,8 +150,10 @@
           <img src="./src/assets/img/about-3.png" alt="About Image" class="benefits-item__image" width="476" height="472">
         </li>
       </ul>
+      </div>
     </section>
     <section class="security" id="security">
+      <div class="container">
       <h2 class="security__header header header-2 text-elem">SECURITY IS OUR MISSION</h2>
       <ul class="security-benefits">
         <li class="security-benefits__item benefits-item list-item">
@@ -163,6 +177,7 @@
           <a href="" class="benefits-item__link link text-elem">Learn more</a>
         </li>
       </ul>
+      </div>
     </section>
   </main>
 </body>
