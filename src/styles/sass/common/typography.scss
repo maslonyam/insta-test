@@ -47,12 +47,12 @@
 }
 
 .button {
-  font-family: "Libre Franklin";
+  font-family: "Libre Franklin", sans-serif;
 }
 
 .text-elem {
   font-size: $text-des;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 }
 
 .text-blue {
@@ -73,10 +73,10 @@
 }
 
 .big-button {
-  font-size: $text-but-b;
   color: $white;
+  font-size: $text-but-b;
 }
 
 .nav__tools * {
-    font-size: $text-tools;
+  font-size: $text-tools;
 }
