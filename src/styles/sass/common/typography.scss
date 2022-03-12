@@ -29,6 +29,8 @@
 }
 
 .header {
+  margin: 0;
+
   &.header-1 {
     font-size: $header-1;
   }
@@ -55,6 +57,12 @@
   font-family: "Poppins", sans-serif;
 }
 
+.text-elem_active:hover {
+  color: $purple;
+  text-shadow: 0 0 5px $white;
+  cursor: pointer;
+}
+
 .text-blue {
   color: $blue;
 }
@@ -79,4 +87,19 @@
 
 .nav__tools * {
   font-size: $text-tools;
+}
+
+.lang-trigger__value {
+  color: $dark-grey;
+}
+
+.tools__lang-list {
+  color: $white;
+}
+
+.nav-item__button {
+  &:checked ~ .nav-item__link {
+    color: $purple;
+    text-shadow: 0 0 5px $white;
+  }
 }

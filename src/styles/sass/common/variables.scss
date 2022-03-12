@@ -1,11 +1,15 @@
+// Container sizes
 $desktop-max: 1920px;
+$desktop-mid: 1440px;
 $desktop-min: 1200px;
 $tablet: 768px;
 $mobile-max: 400px;
 $mobile-min: 320px;
 
+// Paddings
 $margin-a: 0 auto;
 
+// Colors
 $black: #000000;
 $white: #ffffff;
 $blue: #007dfb;
@@ -13,6 +17,7 @@ $purple: #5271f3;
 $light-grey: #f3f4f6;
 $dark-grey: #707070;
 
+// Typography
 $header-1: 96px;
 $header-2: 35px;
 $header-3: 30px;
@@ -24,8 +29,13 @@ $text-link: 18px;
 $text-nav-form: 25px;
 $text-tools: 20px;
 
+// Buttons
 $but-b-pad: 44px 59px;
 $but-sm-pad: 17px 38px;
 
+// Inputs
 $input-big-w: 640px;
-$input-sm-w: 370px;
+$input-sm-w: 320px;
+
+// Header
+$nav-height: 60px;

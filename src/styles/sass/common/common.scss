@@ -4,10 +4,13 @@
 }
 
 .container {
-  width: fit-content;
   max-width: $desktop-min;
   margin: $margin-a;
   padding: 0 40px;
+}
+
+.list {
+  padding: 0;
 }
 
 .list-item {

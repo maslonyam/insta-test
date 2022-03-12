@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: $nav-height;
+  margin-top: 90px;
+}
+
+.nav-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+@media (max-width: $desktop-mid) {
+  .nav-list {
+    margin-left: 40px;
+  }
+}

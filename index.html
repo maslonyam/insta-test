@@ -11,63 +11,76 @@
   <header class="header">
     <div class="container">
     <nav class="nav">
-      <ul class="nav-list">
+      <a class="header__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+      <ul class="nav-list list">
         <li class="nav-item list-item">
-          <a class="header__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+          <a class="nav-item__link link text-elem text-elem_active" href="#products">Products</a>
         </li>
         <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem" href="#products">Products</a>
+          <a class="nav-item__link link text-elem text-elem_active" href="#">Price</a>
         </li>
         <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem" href="#">Price</a>
+          <a class="nav-item__link link text-elem text-elem_active" href="#security">Security</a>
         </li>
         <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem" href="#security">Security</a>
-        </li>
-        <li class="nav-item list-item">
-          <input class="nav-item__button" id="resources" type="checkbox"/>
-          <label class="nav-item__link link text-elem" for="resources">Resources</label>
-          <ul class="list-item__submenu">
+          <input class="nav-item__button trigger" id="resources" type="checkbox"/>
+          <label class="nav-item__link trigger-value link text-elem text-elem_active" for="resources">Resources<span class="trigger-icon"></span></label>
+          <ul class="list-item__submenu list trigger-content">
             <li class="submenu-item list-item">
-              <a class="submenu-item__link link" href="#about">
+              <a class="submenu-item__link link text-elem_active" href="#about">
                 <h4 class="submenu-item__header header-4 header text-elem">About</h4>
-                <p class="submenu-item__info text-link text-elem">We aim to continuously refine our services in highly dynamic industry.</p>
               </a>
+              <p class="submenu-item__info text-link text-elem">We aim to continuously refine our services in highly dynamic industry.</p>
             </li>
             <li class="submenu-item list-item">
-              <a class="submenu-item__link link" href="#">
+              <a class="submenu-item__link link text-elem_active" href="#">
                 <h4 class="submenu-item__header header-4 header text-elem">Careers</h4>
-                <p class="submenu-item__info text-link text-elem">Come join our team and help us build the future.</p>
               </a>
+              <p class="submenu-item__info text-link text-elem">Come join our team and help us build the future.</p>
             </li>
             <li class="submenu-item list-item">
-              <a class="submenu-item__link link" href="#">
+              <a class="submenu-item__link link text-elem_active" href="#">
                 <h4 class="submenu-item__header header-4 header text-elem">Support</h4>
-                <p class="submenu-item__info text-link text-elem">Answers to FAQs and how to contact our customer service team.</p>
               </a>
+              <p class="submenu-item__info text-link text-elem">Answers to FAQs and how to contact our customer service team.</p>
             </li>
             <li class="submenu-item list-item">
-              <a class="submenu-item__link link" href="#">
+              <a class="submenu-item__link link text-elem_active" href="#">
                 <h4 class="submenu-item__header header-4 header text-elem">Blog</h4>
-                <p class="submenu-item__info text-link text-elem">Aroduct announcements, company updates, and industry perspectives.</p>
               </a>
+              <p class="submenu-item__info text-link text-elem">Aroduct announcements, company updates, and industry perspectives.</p>
             </li>
           </ul>
         </li>
       </ul>
-    </div>
     <div class="nav__tools">
       <button class="tools__login button">Log In</button>
-      <select class="tools__lang">
-        <option class="text-elem" value="en">English</option>
-        <option class="text-elem" value="ru">Russian</option>
-        <option class="text-elem" value="fr">French</option>
-        <option class="text-elem" value="de">Deutch</option>
-        <option class="text-elem" value="en">English</option>
-        <option class="text-elem" value="ru">Russian</option>
-      </select>
-      <input class="tools__search-button" type="checkbox"/>
-      <input class="tools__search input text-elem" type="search" placeholder="Search">
+      <div class="tools__lang">
+        <input class="tools__lang-trigger trigger" id="lang-trigger" type="checkbox"/>
+        <label class="lang-trigger__value trigger-value text-elem text-elem_active" for="lang-trigger">English<span class="trigger-icon"></span></label>
+        <div class="tools__lang-list trigger-content">
+          <input class="lang-input" type="radio" id="en" name="lang" checked/>
+          <label class="lang__label text-elem text-elem_active" for="en">English</label>
+          <input class="lang-input" type="radio" id="ru" name="lang"/>
+          <label class="lang__label text-elem text-elem_active" for="ru">Russian</label>
+          <input class="lang-input"  type="radio"id="fr" name="lang"/>
+          <label class="lang__label text-elem text-elem_active" for="fr">French</label>        
+          <input class="lang-input" type="radio" id="de" name="lang"/>
+          <label class="lang__label text-elem text-elem_active" for="de">Deutch</label>        
+          <input class="lang-input"  type="radio" id="en" name="lang"/>
+          <label class="lang__label text-elem text-elem_active" for="en">English</label>
+          <input class="lang-input" type="radio" id="ru" name="lang"/>
+          <label class="lang__label text-elem text-elem_active" for="ru">Russian</label>
+        </div>
+      </div>
+      <div class="tools__search">
+        <input class="search-button" id="search-button" type="checkbox"/>
+        <label for="search-button" class="search-icon"></label>
+        <div class="search-input_wrapper">
+          <span class="search-icon"></span>
+          <input class="search-input input text-elem" type="search" placeholder="Search">
+        </div>
+    </div>
     </div>
     </nav>
   </header>
@@ -87,12 +100,13 @@
       <form class="login__form" id="login-form" action="#">
         <input type="text" class="login-form__input input text-elem" placeholder="Name">
         <select class="login-form__input input text-elem">
-          <option class="text-elem" disabled selected>Country</option>
-          <option class="text-elem" value="rus">Russia</option>
-          <option class="text-elem" value="fra">France</option>
-          <option class="text-elem" value="ger">Germany</option>
-          <option class="text-elem" value="usa">USA</option>
-          <option class="text-elem" value="uk">UK</option>
+          <input class="trigger" type="checkbox" id="country-trigger">Country</input>
+          <label for="country-trigger">Country <span class="trigger-icon"></span></label>
+          <input class="text-elem" value="rus">Russia</input>
+          <input class="text-elem" value="fra">France</input>
+          <input class="text-elem" value="ger">Germany</input>
+          <input class="text-elem" value="usa">USA</input>
+          <input class="text-elem" value="uk">UK</input>
         </select>
         <input type="email" class="login-form__input input text-elem" placeholder="Email">
         <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
@@ -105,7 +119,7 @@
       <div class="container">
       <h2 class="products__header header header-2 text-elem text-blue">Product Specs</h2>
       <div class="products__slider">
-        <ul class="slider__list">
+        <ul class="slider__list list">
           <li class="slider__list-item slider-item list-item" id="slider-1"><img class="slider-item__content" src="./src/assets/img/products-1.png" alt="Product Specs Image" width="746" height="588"></li>
           <li class="slider__list-item slider-item list-item" id="slider-2"><img class="slider-item__content" src="./src/assets/img/products-2.png" alt="Product Specs Image" width="746" height="588"></li>
           <li class="slider__list-item slider-item list-item" id="slider-3"><img class="slider-item__content" src="./src/assets/img/products-3.png" alt="Product Specs Image" width="746" height="588"></li>
@@ -130,7 +144,7 @@
       <div class="container">
       <h2 class="about__header header header-2 text-elem text-blue">GET YOUR SALARY A DAY EARLY</h2>
       <p class="about__description text-elem">You’ve earned it!</p>
-      <ul class="about-benefits">
+      <ul class="about-benefits list">
         <li class="about-benefits__item list-item">
           <h3 class="benefits-item__header header header-3 text-elem">Enjoy payday brought to you a day sooner</h3>
           <p class="benefits-item__desription text-elem">Just switch your salary from your current bank to Revolut by simply sending a ready-made email</p>
@@ -155,7 +169,7 @@
     <section class="security" id="security">
       <div class="container">
       <h2 class="security__header header header-2 text-elem text-blue">SECURITY IS OUR MISSION</h2>
-      <ul class="security-benefits">
+      <ul class="security-benefits list">
         <li class="security-benefits__item benefits-item list-item">
           <h3 class="benefits-item__header header header-3 text-elem">Enjoy payday brought to you a day sooner</h3>
           <p class="benefits-item__description text-elem">Just switch your salary from your current bank to Revolut by simply sending a ready-made email</p>
