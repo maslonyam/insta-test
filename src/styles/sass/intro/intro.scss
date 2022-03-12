@@ -1,0 +1,51 @@
+.intro-background {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  width: 99vw;
+  height: 100vh;
+  background-image: url("/src/assets/img/main-back.png");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+}
+
+.intro {
+  .container {
+    width: 800px;
+
+    .intro__header,
+    .intro__description {
+      text-align: center;
+    }
+
+    .intro__header {
+      margin-top: 1.5em;
+      margin-bottom: 0.4em;
+      line-height: 1em;
+    }
+
+    .intro__description {
+      width: 650px;
+      margin: $margin-a;
+      margin-bottom: 6em;
+    }
+
+    .intro__button {
+      display: flex;
+      align-items: center;
+      margin-bottom: 2.5em;
+      margin-left: auto;
+
+      .intro__button-icon {
+        display: block;
+        width: 30px;
+        height: 25px;
+        margin-left: 15px;
+        background-image: url("/src/assets/svg/arrow-info.svg");
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+          saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
+      }
+    }
+  }
+}
