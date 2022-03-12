@@ -1,16 +1,17 @@
-.intro-background {
-  position: absolute;
-  top: 0;
-  z-index: -99;
-  width: 99vw;
-  height: 100vh;
-  background-image: url("/src/assets/img/main-back.png");
-  background-repeat: no-repeat;
-  background-position: center 0;
-  background-size: cover;
-}
-
 .intro {
+  &::after {
+    position: absolute;
+    top: 0;
+    z-index: -99;
+    width: 99vw;
+    height: 100vh;
+    background-image: url("/src/assets/img/main-back.png");
+    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
+    content: "";
+  }
+
   .container {
     width: 800px;
 
