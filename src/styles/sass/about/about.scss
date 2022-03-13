@@ -47,7 +47,7 @@
     &:nth-child(1n) {
       .benefits-item__image {
         mask: url("/src/assets/svg/mask-about.svg");
-        mask: url("/src/assets/svg/mask-about.svg");
+        -webkit-mask: url("/src/assets/svg/mask-about.svg");
       }
     }
 
@@ -59,7 +59,7 @@
       .benefits-item__image {
         order: 1;
         mask: url("/src/assets/svg/mask-about_revert.svg");
-        mask: url("/src/assets/svg/mask-about_revert.svg");
+        -webkit-mask: url("/src/assets/svg/mask-about_revert.svg");
       }
     }
 
