@@ -129,7 +129,7 @@
       </div>
     </div>
     </section>
-    <section class="products" id="products">
+    <section class="products section" id="products">
       <div class="container">
       <h2 class="products__header header header-2 text-elem text-blue">Product Specs</h2>
       <div class="products__slider">
@@ -143,18 +143,24 @@
         </ul>
         <div class="slider__controls">
           <button class="controls__arrow arrow arrow-left"></button>
-          <input class="controls__par" type="radio" name="slider-current" value="1"/>
-          <input class="controls__par" type="radio" name="slider-current" value="2"/>
-          <input class="controls__par" type="radio" name="slider-current" value="3"/>
-          <input class="controls__par" type="radio" name="slider-current" value="4"/>
-          <input class="controls__par" type="radio" name="slider-current" value="5"/>
-          <input class="controls__par" type="radio" name="slider-current" value="6"/>
+          <input class="controls__pag" type="radio" name="slider-current" id="1" value="1" checked/>
+          <label class="pag-label text-elem" for="1">1</label>
+          <input class="controls__pag" type="radio" name="slider-current" id="2" value="2"/>
+          <label class="text-elem pag-label" for="2">2</label>
+          <input class="controls__pag" type="radio" name="slider-current" id="3" value="3"/>
+          <label class="text-elem pag-label" for="3">3</label>
+          <input class="controls__pag" type="radio" name="slider-current" id="4" value="4"/>
+          <label class="text-elem pag-label" for="4">4</label>
+          <input class="controls__pag" type="radio" name="slider-current" id="5" value="5"/>
+          <label class="text-elem pag-label" for="5">5</label>
+          <input class="controls__pag" type="radio" name="slider-current" id="6" value="6"/>
+          <label class="text-elem pag-label" for="6">6</label>
+          <button class="controls__arrow arrow arrow-right"></button>
         </div>
-        <button class="controls__arrow arrow arrow-right"></button>
       </div>
       </div>
     </section>
-    <section class="about" id="about">
+    <section class="about section" id="about">
       <div class="container">
       <h2 class="about__header header header-2 text-elem text-blue">GET YOUR SALARY A DAY EARLY</h2>
       <p class="about__description text-elem">You’ve earned it!</p>

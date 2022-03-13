@@ -36,8 +36,9 @@
   }
 
   &.header-2 {
+    font-weight: 600;
     font-size: $header-2;
-    
+
     &.login__caption {
       font-weight: 500;
       font-size: $text-nav-form;
@@ -111,4 +112,11 @@
 
 .country {
   color: $dark-grey;
+}
+
+.slider__controls {
+  .text-elem {
+    color: $dark-grey;
+    font-size: $text-link;
+  }
 }

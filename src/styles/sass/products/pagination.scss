@@ -1,0 +1,52 @@
+.slider__controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .controls__arrow {
+    width: 20px;
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(0) saturate(100%) invert(96%) sepia(6%) saturate(6391%)
+      hue-rotate(183deg) brightness(122%) contrast(92%);
+
+    &.arrow-left {
+      background-image: url("/src/assets/svg/arrow-left.svg");
+    }
+
+    &.arrow-right {
+      background-image: url("/src/assets/svg/arrow-right.svg");
+    }
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(48%) sepia(0%) saturate(3156%)
+        hue-rotate(193deg) brightness(91%) contrast(96%);
+    }
+  }
+
+  .pag-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    border: 1px solid $light-grey;
+    border-radius: 50%;
+  }
+
+  .controls__pag {
+    position: absolute;
+    opacity: 0;
+
+    &:hover + .pag-label {
+      cursor: pointer;
+    }
+
+    &:checked + .pag-label {
+      color: $blue;
+      border: 1px solid $blue;
+      border-radius: 50%;
+    }
+  }
+}

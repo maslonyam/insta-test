@@ -1,0 +1,9 @@
+.products__slider {
+  width: 700px;
+  margin: $margin-a;
+
+  .slider__list {
+    display: flex;
+    justify-content: start;
+  }
+}
