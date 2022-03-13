@@ -70,3 +70,23 @@
     }
   }
 }
+
+@media (max-width: $desktop-min) {
+  .about {
+
+    &-benefits {
+      gap: 50px;
+    }
+
+    &-benefits__item {
+      flex-direction: column;
+      gap: 20px;
+
+      .benefits-item_wrapper {
+        order: 2;
+        padding: 0;
+      }
+    }
+  }
+}
+

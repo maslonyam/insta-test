@@ -15,3 +15,9 @@
     margin-top: auto;
   }
 }
+
+@media (max-width: $desktop-min) {
+  .benefits-item_wrapper {
+    height: fit-content;
+  }
+}

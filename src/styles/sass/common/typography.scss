@@ -69,10 +69,6 @@
   font-size: $text-des;
   font-family: "Poppins", sans-serif;
 
-  &.text-blue {
-    color: $blue;
-  }
-
   &.pag-label {
     color: $dark-grey;
     font-size: $text-link;
@@ -81,6 +77,10 @@
   &.benefits-item__description,
   &.benefits-item__link {
     color: $dark-grey;
+  }
+
+  &.text-blue {
+    color: $blue;
   }
 }
 
