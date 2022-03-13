@@ -1,0 +1,37 @@
+.about-benefits__item {
+  display: flex;
+  gap: 16px;
+
+  .benefits-item_wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    padding: 50px 0 50px 50px;
+
+    .header {
+      max-width: 350px;
+      text-align: start;
+    }
+
+    .benefits-item__link {
+      margin-top: auto;
+    }
+  }
+
+  &:nth-child(1n) {
+    .benefits-item__image {
+      mask: url("/src/assets/svg/mask-about.svg");
+    }
+  }
+
+  &:nth-child(2n) {
+    .benefits-item_wrapper {
+      order: 2;
+    }
+
+    .benefits-item__image {
+      order: 1;
+      mask: url("/src/assets/svg/mask-about_revert.svg");
+    }
+  }
+}

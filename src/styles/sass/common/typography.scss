@@ -46,6 +46,7 @@
   }
 
   &.header-3 {
+    font-weight: 500;
     font-size: $header-3;
   }
 
@@ -61,16 +62,25 @@
 .text-elem {
   font-size: $text-des;
   font-family: "Poppins", sans-serif;
-}
 
-.text-elem_active:hover {
-  color: $purple;
-  text-shadow: 0 0 5px $white;
-  cursor: pointer;
-}
+  &.text-blue {
+    color: $blue;
+  }
 
-.text-blue {
-  color: $blue;
+  &.text-elem_active:hover {
+    color: $purple;
+    text-shadow: 0 0 5px $white;
+    cursor: pointer;
+  }
+
+  &.pag-label {
+    color: $dark-grey;
+    font-size: $text-link;
+  }
+
+  &.benefits-item__desription {
+    color: $dark-grey;
+  }
 }
 
 .link {
@@ -112,11 +122,4 @@
 
 .country {
   color: $dark-grey;
-}
-
-.slider__controls {
-  .text-elem {
-    color: $dark-grey;
-    font-size: $text-link;
-  }
 }
