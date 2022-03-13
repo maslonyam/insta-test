@@ -2,21 +2,46 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $nav-height;
+  height: 60px;
   margin-top: 90px;
+
+  &-list {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-right: 20%;
+  }
+
+  .settings-button {
+    opacity: 0;
+    position: absolute;
+
+    &:checked ~ .nav__tools {
+      display: block;
+    }
+  }
+
+  .settings-icon {
+    display: none;
+    width: 36px;
+    height: 25px;
+    background-image: url("/src/assets/svg/settings.svg");
+    background-size: cover;
+  }
 }
 
-.nav-list {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 60px;
-  justify-content: center;
-  margin-left: 100px;
-}
+@media (max-width: $desktop-min) {
+  .nav {
+    &-list {
+      margin-left: 20px;
+      margin-right: 0;
+    }
 
-@media (max-width: $desktop-mid) {
-  .nav-list {
-    margin-left: 40px;
+    .settings-icon {
+      display: block;
+    }
   }
 }

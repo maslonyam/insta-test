@@ -73,12 +73,6 @@
     color: $blue;
   }
 
-  &.text-elem_active:hover {
-    color: $purple;
-    text-shadow: 0 0 5px $white;
-    cursor: pointer;
-  }
-
   &.pag-label {
     color: $dark-grey;
     font-size: $text-link;
@@ -88,6 +82,12 @@
   &.benefits-item__link {
     color: $dark-grey;
   }
+}
+
+.text-elem_active:hover {
+  color: $purple;
+  text-shadow: 0 0 5px $white;
+  cursor: pointer;
 }
 
 .link {
@@ -129,4 +129,63 @@
 
 .country {
   color: $dark-grey;
+}
+
+@media (max-width: $desktop-mid) {
+  $header-1: 80px;
+  $header-2: 30px;
+  $header-3: 25px;
+  $header-4: 20px;
+
+  $text-des: 20px;
+  $text-but-b: 25px;
+  $text-link: 16px;
+  $text-nav-form: 20px;
+  $text-tools: 16px;
+
+  .header {
+    &.header-1 {
+      font-size: $header-1;
+    }
+
+    &.header-2 {
+      font-size: $header-2;
+
+      &.login__caption {
+        font-size: $text-nav-form;
+      }
+    }
+
+    &.header-3 {
+      font-size: $header-3;
+    }
+
+    &.header-4 {
+      font-size: $header-4;
+    }
+  }
+
+  .text-elem {
+    font-size: $text-des;
+
+    &.pag-label {
+      font-size: $text-link;
+    }
+  }
+
+  .nav-item__link {
+    font-size: $text-nav-form;
+  }
+
+  .text-link {
+    font-size: $text-link;
+  }
+
+  .big-button {
+    font-size: $text-but-b;
+  }
+
+  .nav__tools * {
+    font-size: $text-tools;
+  }
 }

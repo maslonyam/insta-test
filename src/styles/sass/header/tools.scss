@@ -101,3 +101,20 @@
     }
   }
 }
+
+@media (max-width: $desktop-mid) {
+  .nav__tools {
+    .tools__lang {
+      & * {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-min) {
+  .nav__tools {
+    display: none;
+    top: 150px;
+  }
+}

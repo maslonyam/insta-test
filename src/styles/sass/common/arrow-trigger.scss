@@ -31,3 +31,11 @@
     background-size: cover;
   }
 }
+
+@media (max-width: $desktop-mid) {
+  .trigger-value {
+    .trigger-icon {
+      margin-left: 5px;
+    }
+  }
+}

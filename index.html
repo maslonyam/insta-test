@@ -11,7 +11,7 @@
   <header class="header">
     <div class="container">
     <nav class="nav">
-      <a class="header__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+      <a class="nav__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
       <ul class="nav-list list">
         <li class="nav-item list-item">
           <a class="nav-item__link link text-elem text-elem_active" href="#products">Products</a>
@@ -53,7 +53,10 @@
           </ul>
         </li>
       </ul>
+        <input class="settings-button" id="settings-button" type="checkbox">
+        <label class="settings-icon" for="settings-button"></label>
     <div class="nav__tools">
+      <div class="nav__tools_wrapper">
       <button class="tools__login button">Log In</button>
       <div class="tools__lang">
         <input class="tools__lang-trigger trigger" id="lang-trigger" type="checkbox"/>
@@ -81,6 +84,7 @@
           <input class="search-input input text-elem" type="search" placeholder="Search">
         </div>
     </div>
+  </div>
     </div>
     </nav>
   </header>
