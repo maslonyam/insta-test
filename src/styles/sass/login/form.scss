@@ -1,0 +1,54 @@
+.login-header {
+  margin: 80px 0;
+}
+
+.login__caption {
+  margin-bottom: 40px;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+
+  .button {
+    margin-top: 40px;
+  }
+}
+
+.country {
+  position: relative;
+
+  .trigger-value {
+    position: relative;
+    display: block;
+    width: 100%;
+    line-height: 1.3em;
+  }
+
+  .trigger-icon {
+    position: absolute;
+    right: 0;
+    margin-top: 5px;
+  }
+
+  .trigger-content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-height: 300px;
+    padding: 20px 50px;
+    background-color: $light-grey;
+    border-radius: 40px;
+
+    .country-input {
+      position: absolute;
+      opacity: 0;
+    }
+  }
+}

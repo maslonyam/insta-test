@@ -92,22 +92,36 @@
       <button class="intro__button big-button button">Get Started <span class="intro__button-icon"></span></button>
     </section>
     <section class="login" id="login">
+      <div class="close-icon">
+        <input class="close-icon__input" type="checkbox"/>
+        <span class="login-close"></span>
+        <span class="login-close"></span>
+      </div>
       <div class="container">
       <header class="login-header">
         <a class="link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
       </header>
-      <h2 class="login__header header header-2 text-elem">Registration form</h2>
+      <h2 class="login__caption header header-2 text-elem">Registration form</h2>
       <form class="login__form" id="login-form" action="#">
         <input type="text" class="login-form__input input text-elem" placeholder="Name">
-        <select class="login-form__input input text-elem">
-          <input class="trigger" type="checkbox" id="country-trigger">Country</input>
-          <label for="country-trigger">Country <span class="trigger-icon"></span></label>
-          <input class="text-elem" value="rus">Russia</input>
-          <input class="text-elem" value="fra">France</input>
-          <input class="text-elem" value="ger">Germany</input>
-          <input class="text-elem" value="usa">USA</input>
-          <input class="text-elem" value="uk">UK</input>
-        </select>
+        <fieldset class="country login-form__input input">
+        <input class="login-form__input trigger text-elem" type="checkbox" id="country-trigger"/>
+        <label class="country-trigger__value trigger-value text-elem" for="country-trigger">Country<span class="trigger-icon"></span></label>
+        <div class="country-list trigger-content">
+          <input class="country-input" type="radio" id="usa" name="country" checked/>
+          <label class="country__label text-elem text-elem_active" for="usa">USA</label>
+          <input class="country-input" type="radio" id="rus" name="country"/>
+          <label class="country__label text-elem text-elem_active" for="rus">Russia</label>
+          <input class="country-input"  type="radio"id="fra" name="country"/>
+          <label class="country__label text-elem text-elem_active" for="fra">France</label>        
+          <input class="country-input" type="radio" id="ger" name="country"/>
+          <label class="country__label text-elem text-elem_active" for="ger">Germany</label>        
+          <input class="country-input"  type="radio" id="uk" name="country"/>
+          <label class="country__label text-elem text-elem_active" for="uk">UK</label>
+          <input class="country-input" type="radio" id="sp" name="country"/>
+          <label class="country__label text-elem text-elem_active" for="sp">Spain</label>
+        </div>
+        </fieldset>
         <input type="email" class="login-form__input input text-elem" placeholder="Email">
         <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
         <button class="login-form__button big-button button">Registration</button>
@@ -194,5 +208,6 @@
       </div>
     </section>
   </main>
+  
 </body>
 </html>

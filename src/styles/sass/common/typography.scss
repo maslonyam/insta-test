@@ -37,6 +37,11 @@
 
   &.header-2 {
     font-size: $header-2;
+    
+    &.login__caption {
+      font-weight: 500;
+      font-size: $text-nav-form;
+    }
   }
 
   &.header-3 {
@@ -102,4 +107,8 @@
     color: $purple;
     text-shadow: 0 0 5px $white;
   }
+}
+
+.country {
+  color: $dark-grey;
 }
