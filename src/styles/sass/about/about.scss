@@ -21,11 +21,52 @@
     align-items: center;
   }
 
-  .header {
-    text-align: center;
-  }
-
   &__description {
     margin-bottom: 60px;
+  }
+
+  &-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &-benefits__item {
+    display: flex;
+    gap: 26px;
+
+    .benefits-item_wrapper {
+      max-width: 500px;
+      padding: 50px 0 50px 50px;
+
+      .benefits-item__description {
+        width: 450px;
+      }
+    }
+
+    &:nth-child(1n) {
+      .benefits-item__image {
+        mask: url("/src/assets/svg/mask-about.svg");
+        mask: url("/src/assets/svg/mask-about.svg");
+      }
+    }
+
+    &:nth-child(2n) {
+      .benefits-item_wrapper {
+        order: 2;
+      }
+
+      .benefits-item__image {
+        order: 1;
+        mask: url("/src/assets/svg/mask-about_revert.svg");
+        mask: url("/src/assets/svg/mask-about_revert.svg");
+      }
+    }
+
+    .link {
+      width: fit-content;
+      background-color: transparent;
+      border: none;
+    }
   }
 }

@@ -1,0 +1,17 @@
+.benefits-item_wrapper {
+  position: relative;
+  z-index: 99;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  padding: 50px;
+
+  .header {
+    max-width: 350px;
+  }
+
+  .benefits-item__link {
+    margin-top: auto;
+  }
+}

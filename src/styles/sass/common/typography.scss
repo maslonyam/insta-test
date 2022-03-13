@@ -55,6 +55,12 @@
   }
 }
 
+.section {
+  .header-2 {
+    text-align: center;
+  }
+}
+
 .button {
   font-family: "Libre Franklin", sans-serif;
 }
@@ -78,7 +84,8 @@
     font-size: $text-link;
   }
 
-  &.benefits-item__desription {
+  &.benefits-item__description,
+  &.benefits-item__link {
     color: $dark-grey;
   }
 }
