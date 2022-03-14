@@ -1,94 +1,106 @@
 .security {
   background-color: $white;
 
+  &__header {
+    margin-bottom: 80px;
+  }
+
   &-benefits {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
-  }
 
-  &__header {
-    margin-bottom: 80px;
+    &__item {
+      position: relative;
+      overflow: hidden;
+      max-width: 555px;
+      flex: 1 0 400px;
+      border: 1px solid $light-grey;
+      border-radius: 15px;
+      background-position: center;
+
+      &:nth-child(1) {
+        background-image: url("/src/assets/img/security-1.png");
+      }
+
+      &:nth-child(2) {
+        background-image: url("/src/assets/img/security-2.png");
+      }
+
+      &:nth-child(3) {
+        background-image: url("/src/assets/img/security-3.png");
+      }
+
+      &:nth-child(4) {
+        background-image: url("/src/assets/img/security-4.png");
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        background-color: $light-grey;
+
+        .benefits-item__button:checked ~ .text-elem {
+          color: $white;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        width: 100%;
+
+        .benefits-item__description {
+          max-width: 265px;
+        }
+      }
+
+      .benefits-item__button {
+        display: none;
+
+        &:hover ~ .benefits-item__link {
+          cursor: pointer;
+          color: $blue;
+        }
+
+        &:checked ~ .benefits-item__description {
+          transform: translate(0);
+        }
+
+        &:checked ~ .blur {
+          background-color: rgba($blue, 0.8);
+          backdrop-filter: blur(3px);
+          opacity: 1;
+        }
+      }
+
+      .benefits-item__description {
+        transform: translate(-500px);
+        transition: 0.3s;
+      }
+
+      .blur {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        opacity: 0;
+        transition: 0.3s;
+      }
+    }
   }
 }
 
-.security-benefits__item {
-  position: relative;
-  overflow: hidden;
-  max-width: 555px;
-  flex: 1 0 400px;
-  border: 1px solid $light-grey;
-  border-radius: 15px;
-  background-position: center;
-
-  &:nth-child(1) {
-    background-image: url("/src/assets/img/security-1.png");
-  }
-
-  &:nth-child(2) {
-    background-image: url("/src/assets/img/security-2.png");
-  }
-
-  &:nth-child(3) {
-    background-image: url("/src/assets/img/security-3.png");
-  }
-
-  &:nth-child(4) {
-    background-image: url("/src/assets/img/security-4.png");
-  }
-
-  &:nth-child(2),
-  &:nth-child(3) {
-    background-color: $light-grey;
-
-    .benefits-item__button:checked ~ .text-elem {
-      color: $white;
-    }
-  }
-
-  &:nth-child(1),
-  &:nth-child(4) {
-    width: 100%;
-
-    .benefits-item__description {
-      max-width: 265px;
-    }
-  }
-
-  .benefits-item__description {
-    transform: translate(-500px);
-    transition: 0.3s;
-  }
-
-  .blur {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    opacity: 0;
-    transition: 0.3s;
-  }
-
-  .benefits-item__button {
-    display: none;
-
-    &:hover ~ .benefits-item__link {
-      cursor: pointer;
-      color: $blue;
+@media (max-width: $desktop-mid) {
+  .security {
+    &-benefits {
+      justify-content: center;
     }
 
-    &:checked ~ .benefits-item__description {
-      transform: translate(0);
-    }
-
-    &:checked ~ .blur {
-      background-color: rgba($blue, 0.8);
-      backdrop-filter: blur(3px);
-      opacity: 1;
+    .benefits-item_wrapper {
+      height: 470px;
     }
   }
 }

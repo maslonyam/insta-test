@@ -19,5 +19,9 @@
 @media (max-width: $desktop-min) {
   .benefits-item_wrapper {
     height: fit-content;
+
+    .header {
+      max-width: 300px;
+    }
   }
 }
