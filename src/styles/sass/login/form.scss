@@ -1,19 +1,13 @@
-.login-header {
-  margin: 80px 0;
-}
+.login {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 
-.login__caption {
-  margin-bottom: 40px;
-}
-
-.login__form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-
-  .button {
-    margin-top: 40px;
+    .button {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -49,6 +43,20 @@
     .country-input {
       position: absolute;
       opacity: 0;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .login {
+    &__form {
+      width: fit-content;
+      margin: $margin-a;
+      margin-top: 200px;
+  
+      .button {
+        margin-top: 40px;
+      }
     }
   }
 }

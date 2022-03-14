@@ -16,19 +16,16 @@
 }
 
 @media (max-width: $desktop-mid) {
-  $but-b-pad: 44px 59px;
-  $but-sm-pad: 17px 38px;
+  $but-b-pad: 30px 40px;
+  $but-sm-pad: 10px 30px;
 
-  .big-button {
-    padding: $but-b-pad;
-    background-color: $blue;
-    border-radius: 62px;
-  }
+  .button {
+    &.big-button {
+      padding: $but-b-pad;
+    }
 
-  .tools__login {
-    padding: $but-sm-pad;
-    background-color: $white;
-    border-radius: 28px;
-    box-shadow: 0 0 10px rgba($black, 0.1);
+    &.tools__login {
+      padding: $but-sm-pad;
+    }
   }
 }
