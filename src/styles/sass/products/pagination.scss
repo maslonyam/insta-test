@@ -50,3 +50,27 @@
     }
   }
 }
+
+@media (max-width: $tablet) {
+  .slider__controls {
+    .controls__arrow {
+      display: none;
+    }
+
+    .pag-label {
+      width: 10px;
+      height: 10px;
+      background-color:   $dark-grey;
+    }
+
+    .controls__pag { 
+      &:checked + .pag-label {
+        background-color: $blue;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-max) {
+  
+}

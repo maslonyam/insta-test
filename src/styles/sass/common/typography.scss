@@ -223,6 +223,10 @@
 
   .text-elem {
     font-size: $text-des;
+
+    &.pag-label {
+      font-size: 8px;
+    }
   }
 
   .submenu-item {

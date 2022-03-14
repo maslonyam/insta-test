@@ -1,5 +1,4 @@
 .slider {
-  width: 700px;
   margin: $margin-a;
 
   &__list {
@@ -9,5 +8,23 @@
 
   &-item__content {
     width: 700px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .slider {
+    &-item__content {
+      width: 400px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: $mobile-max) {
+  .slider {
+    &-item__content {
+      width: 280px;
+      height: auto;
+    }
   }
 }
