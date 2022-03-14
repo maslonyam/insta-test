@@ -98,9 +98,41 @@
     &-benefits {
       justify-content: center;
     }
+  }
+}
 
-    .benefits-item_wrapper {
-      height: 470px;
+@media (max-width: $tablet) {
+  .security {
+    &-benefits {
+      gap: 20px;
+      &__item {
+        flex: 1 0 100%;
+        border: none;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4) {
+          background-image: none;
+          background-color: transparent;
+        }
+
+        &:nth-child(2n){
+          background-color: $light-grey;
+        }
+
+        .benefits-item__description {
+          margin-bottom: 0;
+          transform: translate(0);
+        }
+
+        .benefits-item_wrapper {
+          padding: 20px;
+          .benefits-item__link {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
