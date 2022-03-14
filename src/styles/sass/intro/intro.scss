@@ -32,9 +32,9 @@
   &__button {
     display: flex;
     align-items: center;
+    margin-right: 10%;
     margin-bottom: 2.5em;
     margin-left: auto;
-    margin-right: 10%;
 
     &-icon {
       display: block;
@@ -55,12 +55,20 @@
       background-size: auto;
       filter: blur(3px);
     }
+  }
+}
 
+@media (max-width: $tablet) {
+  .intro {
     &__button {
       display: flex;
       align-items: center;
       margin: 0 auto;
       margin-bottom: 2.5em;
+    }
+
+    &__description {
+      width: fit-content;
     }
   }
 }

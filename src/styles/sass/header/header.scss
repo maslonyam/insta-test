@@ -1,9 +1,25 @@
+.header-section {
+  height: 60px;
+  margin-top: 90px;
+
+  .header-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1920px;
+    padding-left: 10%;
+    padding-right: 40px;
+
+    .menu {
+      display: none;
+    }
+  }
+}
+
 .nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 60px;
-  margin-top: 90px;
 
   &-list {
     position: relative;
@@ -11,37 +27,130 @@
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    width: 100%;
-    margin-right: 20%;
+    margin: $margin-a;
   }
 
   .settings-button {
     opacity: 0;
     position: absolute;
 
-    &:checked ~ .nav__tools {
-      display: block;
+    &:checked ~ .tools__settings {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      display: flex;
+      width: fit-content;
     }
   }
 
   .settings-icon {
     display: none;
-    width: 36px;
+    width: 25px;
     height: 25px;
+    margin-left: auto;
     background-image: url("/src/assets/svg/settings.svg");
     background-size: cover;
+    filter: brightness(0) saturate(100%) invert(42%) sepia(50%) saturate(0%)
+      hue-rotate(219deg) brightness(95%) contrast(103%);
+
+    &:hover {
+      transform: rotate(30deg);
+    }
   }
 }
 
 @media (max-width: $desktop-min) {
+  .header-section {
+    .header-container {
+      padding: 0 20px;
+    }
+  }
+
   .nav {
+    &__logo-link {
+      .logo-image {
+        width: 150px;
+      }
+    }
+
     &-list {
-      margin-left: 20px;
+      gap: 15px;
       margin-right: 0;
     }
 
     .settings-icon {
       display: block;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .header-section {
+    .header-container {
+      .menu {
+        position: absolute;
+        z-index: 150;
+        display: inline-block;
+        width: 20px;
+        right: 30px;
+
+        &-button {
+          position: absolute;
+          opacity: 0;
+        }
+
+        &-icon,
+        &-icon::after,
+        &-icon::before {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background-color: $dark-grey;
+          border-radius: 5px;
+        }
+
+        &-icon {
+          position: relative;
+        }
+
+        &-icon::after,
+        &-icon::before {
+          position: absolute;
+          margin-top: 6px;
+          content: "";
+        }
+
+        &-icon::before {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  .nav {
+    display: none;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90vw;
+    height: 80vh;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px 20px;
+    border-bottom-left-radius: 42px;
+    background-color: rgba($white, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba($dark-grey, 0.3);
+
+    &-list {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .settings-icon {
+      display: none;
     }
   }
 }

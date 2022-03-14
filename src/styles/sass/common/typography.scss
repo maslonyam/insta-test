@@ -189,3 +189,49 @@
     font-size: $text-tools;
   }
 }
+
+@media (max-width: $tablet) {
+  $header-1: 40px;
+  $header-2: 25px;
+  $header-3: 20px;
+  $header-4: 18px;
+
+  $text-des: 16px;
+  $text-but-b: 18px;
+
+  .header {
+    &.header-1 {
+      font-size: $header-1;
+    }
+
+    &.header-2 {
+      font-size: $header-2;
+
+      &.login__caption {
+        font-size: $text-nav-form;
+      }
+    }
+
+    &.header-3 {
+      font-size: $header-3;
+    }
+
+    &.header-4 {
+      font-size: $header-4;
+    }
+  }
+
+  .text-elem {
+    font-size: $text-des;
+  }
+
+  .submenu-item {
+    .header {
+      font-weight: 500;
+    }
+  }
+
+  .big-button {
+    font-size: $text-but-b;
+  }
+}

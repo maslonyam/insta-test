@@ -19,6 +19,7 @@
 
 @media (max-width: $desktop-mid) {
   $input-big-w: 500px;
+
   .input {
     &.login-form__input {
       width: $input-big-w;
@@ -28,6 +29,7 @@
 
 @media (max-width: $tablet) {
   $input-big-w: 100%;
+
   .input {
     &.login-form__input {
       width: $input-big-w;

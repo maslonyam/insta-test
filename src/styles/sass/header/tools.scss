@@ -1,112 +1,108 @@
-.nav__tools {
-  position: absolute;
-  top: 90px;
-  right: 40px;
-
-  .tools__lang {
+.nav {
+  &__tools {
     position: relative;
-    display: inline-flex;
-    flex-direction: column;
+    margin-left: auto;
 
-    & * {
-      margin-right: 30px;
+    &_wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
     }
 
-    .tools__lang-list {
-      position: absolute;
-      top: 30px;
-      display: none;
-      flex-direction: column;
-      box-sizing: border-box;
-      width: 176px;
-      height: 0;
-      max-height: 340px;
-      padding: 25px 18px;
-      background-color: rgba($black, 0.2);
-      border-radius: 42px;
-      backdrop-filter: blur(20px);
-      transition: 0.3s;
+    .tools__lang {
+      position: relative;
+      display: flex;
+      flex-direction: row;
 
-      .lang-input {
+      &-list {
+        position: absolute;
+        top: 2.2rem;
+        right: -40%;
         display: none;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: fit-content;
+        height: 0;
+        max-height: 340px;
+        padding: 25px;
+        background-color: rgba($black, 0.2);
+        border-radius: 42px;
+        backdrop-filter: blur(20px);
+        transition: 0.3s;
+
+        .lang-input {
+          display: none;
+        }
+
+        .lang__label {
+          padding-right: 40px;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
 
-      .lang__label:hover {
-        cursor: pointer;
+      &-trigger {
+        display: none;
+
+        &:checked ~ .tools__lang-list {
+          display: flex;
+          height: fit-content;
+        }
       }
     }
 
-    .tools__lang-trigger {
-      display: none;
+    .tools__settings {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
 
-      &:checked ~ .tools__lang-list {
-        display: flex;
+    .tools__search {
+      width: 15px;
+      height: 15px;
+      margin-right: 0;
+
+      .search-input_wrapper {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        display: none;
+        width: fit-content;
         height: fit-content;
+
+        .search-input {
+          outline: none;
+
+          &:focus {
+            border: 1px solid $blue;
+            box-shadow: 0 0 10px rgba($dark-grey, 0.3);
+          }
+        }
+
+        .search-icon {
+          top: 20px;
+          right: 15px;
+        }
       }
-    }
 
-    .lang-trigger__value {
-      padding-left: 20px;
-    }
-  }
+      .search-button {
+        position: absolute;
+        opacity: 0;
 
-  .tools__search {
-    position: relative;
-    display: inline;
-    width: 15px;
-    height: 15px;
-    margin-right: 0;
-
-    .search-input_wrapper {
-      position: absolute;
-      top: 10px;
-      right: 0;
-      display: none;
-      width: fit-content;
-      height: fit-content;
-
-      .search-input {
-        outline: none;
-
-        &:focus {
-          border: 1px solid $blue;
-          box-shadow: 0 0 10px rgba($dark-grey, 0.3);
+        &:checked ~ .search-input_wrapper {
+          display: block;
         }
       }
 
       .search-icon {
-        top: 20px;
-        right: 15px;
-      }
-    }
-
-    .search-button {
-      position: absolute;
-      opacity: 0;
-
-      &:checked ~ .search-input_wrapper {
-        position: relative;
-        display: block;
-      }
-    }
-
-    .search-icon {
-      position: absolute;
-      top: 0;
-      width: 15px;
-      height: 15px;
-      margin-top: 3px;
-      background-image: url("/src/assets/svg/search.svg");
-      background-size: contain;
-    }
-  }
-}
-
-@media (max-width: $desktop-mid) {
-  .nav__tools {
-    .tools__lang {
-      & * {
-        margin-right: 10px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url("/src/assets/svg/search.svg");
+        background-size: contain;
       }
     }
   }
@@ -114,7 +110,21 @@
 
 @media (max-width: $desktop-min) {
   .nav__tools {
-    display: none;
-    top: 150px;
+    .tools__settings {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .nav {
+    &__tools {
+      margin-top: auto;
+      margin-left: 0;
+
+      .tools__settings {
+        display: flex;
+      }
+    }
   }
 }
