@@ -168,13 +168,13 @@
   .text-elem {
     font-size: $text-des;
 
+    .nav-item__link {
+      font-size: $text-nav-form;
+    }
+
     &.pag-label {
       font-size: $text-link;
     }
-  }
-
-  .nav-item__link {
-    font-size: $text-nav-form;
   }
 
   .text-link {
@@ -231,6 +231,10 @@
     &.benefits-item__description {
       color: $black;
     }
+  }
+
+  .nav-item__link {
+    font-size: 20px;
   }
 
   .submenu-item {

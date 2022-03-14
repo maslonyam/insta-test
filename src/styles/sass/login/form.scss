@@ -50,12 +50,13 @@
 @media (max-width: $tablet) {
   .login {
     &__form {
+      gap: 15px;
       width: fit-content;
       margin: $margin-a;
-      margin-top: 200px;
+      margin-top: 20vh;
   
       .button {
-        margin-top: 40px;
+        margin-top: 30px;
       }
     }
   }

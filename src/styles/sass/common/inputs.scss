@@ -33,6 +33,12 @@
   .input {
     &.login-form__input {
       width: $input-big-w;
+      padding: 16px 30px;
+    }
+
+    &.search-input {
+      width: 120%;
+      padding: 15px 30px;
     }
   }
 }

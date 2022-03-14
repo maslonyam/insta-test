@@ -102,6 +102,10 @@
 
 @media (max-width: $tablet) {
   .about {
+    &__description {
+      margin-bottom: 30px;
+    }
+
     &-benefits {
       width: 100%;
     }

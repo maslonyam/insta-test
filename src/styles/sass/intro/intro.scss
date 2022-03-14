@@ -69,6 +69,8 @@
 
     &__description {
       width: fit-content;
+      max-width: 500px;
+      margin-bottom: 3em;
     }
   }
 }

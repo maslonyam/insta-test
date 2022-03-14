@@ -28,3 +28,10 @@
     padding: 0 20px;
   }
 }
+
+@media (max-width: $tablet) {
+  .section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

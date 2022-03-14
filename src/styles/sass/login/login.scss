@@ -3,13 +3,22 @@
   top: 0;
   left: 0;
   z-index: 399;
-  display: none;
   width: 100vw;
   height: 100vh;
-  //background-image: url("/src/assets/img/main-back.png");
-    //background-size: contain;
 
   &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/assets/img/main-back.png");
+    background-size: contain;
+    filter: blur(2px);
+    content: "";
+  }
+
+  &::after {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,6 +34,7 @@
       linear-gradient(#ffffff, #ffffff);
     -webkit-mask-composite: destination-out;
     -webkit-mask-repeat: no-repeat;
+    filter: blur(2px);
   }
 
   .container {
@@ -45,9 +55,19 @@
   position: absolute;
   top: 70px;
   left: calc(60vw + 240px);
-  z-index: 199;
+  z-index: 302;
   width: 20px;
   height: 20px;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba($black, 0.1);
+    filter: blur(5px);
+    content: "";
+  }
 
   &__input {
     position: absolute;
@@ -79,7 +99,7 @@
     background-image: url("/src/assets/img/main-back.png");
     background-size: 150%;
     background-position: 100% -30%;
-    &::before {
+    &::after {
       mask: url("/src/assets/svg/mask-top.svg") 0/100% 100%,
         linear-gradient(#ffffff, #ffffff);
       -webkit-mask: url("/src/assets/svg/mask-top.svg") 0/100% 100%,
@@ -90,6 +110,7 @@
 
     &-header {
       margin-bottom: 0;
+      margin-top: 40px;
     }
   
     &__caption {
@@ -99,7 +120,7 @@
 
   .close-icon {
     top: 170px;
-    left: 75%;
+    left: 75%; 
   
     .login-close {
       background-color: $blue;

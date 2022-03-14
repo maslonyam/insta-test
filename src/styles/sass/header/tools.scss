@@ -24,7 +24,8 @@
         box-sizing: border-box;
         width: fit-content;
         height: 0;
-        max-height: 340px;
+        max-height: 200px;
+        overflow-y: scroll;
         padding: 25px;
         background-color: rgba($black, 0.2);
         border-radius: 42px;
@@ -122,8 +123,34 @@
       margin-top: auto;
       margin-left: 0;
 
+      .tools__lang {
+        &-list {
+          top: -200px;
+        }
+      }
+
       .tools__settings {
         display: flex;
+      }
+    }
+
+    .tools__search {
+      .search-input_wrapper {
+        top: -4rem;
+        left: 0;
+
+        .search-input {
+          outline: none;
+
+          &:focus {
+            border: 1px solid $blue;
+            box-shadow: 0 0 10px rgba($dark-grey, 0.3);
+          }
+        }
+
+        .search-icon {
+          right: -32px;
+        }
       }
     }
   }

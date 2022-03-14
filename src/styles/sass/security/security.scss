@@ -103,6 +103,9 @@
 
 @media (max-width: $tablet) {
   .security {
+    .header{
+      margin-bottom: 20px;
+    }
     &-benefits {
       gap: 20px;
       &__item {
