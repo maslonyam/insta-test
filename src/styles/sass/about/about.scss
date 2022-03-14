@@ -48,6 +48,10 @@
       .benefits-item__image {
         mask: url("/src/assets/svg/mask-about.svg");
         -webkit-mask: url("/src/assets/svg/mask-about.svg");
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: 100%;
+        -webkit-mask-size: contain;
       }
     }
 
@@ -60,8 +64,14 @@
         order: 1;
         mask: url("/src/assets/svg/mask-about_revert.svg");
         -webkit-mask: url("/src/assets/svg/mask-about_revert.svg");
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+        mask-size: 100%;
+        -webkit-mask-size: contain;
       }
     }
+
+    
 
     .link {
       width: fit-content;
@@ -90,3 +100,25 @@
   }
 }
 
+@media (max-width: $tablet) {
+  .about {
+    &-benefits {
+      width: 100%;
+    }
+  
+    &-benefits__item {
+      align-items: center;
+      .benefits-item__image {
+        max-width: 476px;
+        width: 100%;
+        height: auto;
+      }
+      .benefits-item_wrapper {
+        .benefits-item__description {
+          max-width: 476px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
