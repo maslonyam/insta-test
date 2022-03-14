@@ -6,7 +6,6 @@
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    max-width: 1920px;
     padding-left: 10%;
     padding-right: 40px;
 
@@ -75,7 +74,6 @@
 
     &-list {
       gap: 15px;
-      margin-right: 0;
     }
 
     .settings-icon {

@@ -3,6 +3,7 @@
   z-index: 99;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   box-sizing: border-box;
   height: 470px;
   padding: 50px;
@@ -12,7 +13,34 @@
   }
 
   .benefits-item__link {
+    display: inline-block;
+    padding: 5px 15px;
     margin-top: auto;
+
+    &::after {
+      position: relative;
+      display: none;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+      background-image: url("/src/assets/svg/arrow-info.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: "";
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(199deg) brightness(106%) contrast(102%);
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $white;
+      background-color: $blue;
+      border-radius: 23px;
+
+      &::after {
+        display: inline-block;
+      }
+    }
   }
 }
 

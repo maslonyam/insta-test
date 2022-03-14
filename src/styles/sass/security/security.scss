@@ -57,11 +57,6 @@
       .benefits-item__button {
         display: none;
 
-        &:hover ~ .benefits-item__link {
-          cursor: pointer;
-          color: $blue;
-        }
-
         &:checked ~ .benefits-item__description {
           transform: translate(0);
         }

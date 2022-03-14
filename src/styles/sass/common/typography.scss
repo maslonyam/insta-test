@@ -37,6 +37,7 @@
 
   &.header-2 {
     font-weight: 600;
+    color: $blue;
     font-size: $header-2;
 
     &.login__caption {
@@ -46,11 +47,11 @@
   }
 
   &.header-3 {
-    font-weight: 500;
     font-size: $header-3;
   }
 
   &.header-4 {
+    font-weight: 400;
     font-size: $header-4;
   }
 }
@@ -68,18 +69,8 @@
 .text-elem {
   font-size: $text-des;
   font-family: "Poppins", sans-serif;
-
-  &.pag-label {
-    color: $dark-grey;
-    font-size: $text-link;
-  }
-
-  &.benefits-item__description,
-  &.benefits-item__link {
-    color: $dark-grey;
-  }
-
-  &.text-blue {
+  margin-right: 0;
+  .text-blue {
     color: $blue;
   }
 }
@@ -245,5 +236,15 @@
 
   .big-button {
     font-size: $text-but-b;
+  }
+}
+
+@media (max-width: $mobile-max) {
+  $header-1: 30px;
+
+  .header {
+    &.header-1 {
+      font-size: $header-1;
+    }
   }
 }

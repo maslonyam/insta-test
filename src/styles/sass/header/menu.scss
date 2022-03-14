@@ -48,6 +48,23 @@
 
     .submenu-item {
       max-width: 345px;
+
+      &__header {
+        transition: 0.3s;
+        &:hover::after {
+          position: relative;
+          display: inline-block;
+          width: 20px;
+          height: 10px;
+          margin-left: 10px;
+          vertical-align: middle;
+          background-image: url("/src/assets/svg/arrow-info.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(1272%) hue-rotate(215deg) brightness(98%) contrast(94%);
+          content: "";
+        }
+      }
     }
   }
 }

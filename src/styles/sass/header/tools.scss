@@ -1,7 +1,6 @@
 .nav {
   &__tools {
     position: relative;
-    margin-left: auto;
 
     &_wrapper {
       display: flex;
@@ -15,32 +14,52 @@
       display: flex;
       flex-direction: row;
 
-      &-list {
+      .tools__lang_wrapper {
         position: absolute;
         top: 2.2rem;
         right: -40%;
         display: none;
-        flex-direction: column;
-        box-sizing: border-box;
-        width: fit-content;
-        height: 0;
-        max-height: 200px;
-        overflow-y: scroll;
         padding: 25px;
         background-color: rgba($black, 0.2);
         border-radius: 42px;
         backdrop-filter: blur(20px);
+      }
+
+      &-list {
+        max-height: 200px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        width: fit-content;
+        
         transition: 0.3s;
 
         .lang-input {
           display: none;
+
+          &:checked + .lang__label::after {
+            position: relative;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: url("/src/assets/svg/check.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(199deg) brightness(106%) contrast(102%);
+            content: "";
+          }
         }
 
         .lang__label {
-          padding-right: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100px;
 
           &:hover {
             cursor: pointer;
+            filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(1272%) hue-rotate(215deg) brightness(98%) contrast(94%);
           }
         }
       }
@@ -48,8 +67,8 @@
       &-trigger {
         display: none;
 
-        &:checked ~ .tools__lang-list {
-          display: flex;
+        &:checked ~ .tools__lang_wrapper {
+          display: block;
           height: fit-content;
         }
       }
@@ -121,7 +140,7 @@
   .nav {
     &__tools {
       margin-top: auto;
-      margin-left: 0;
+      margin-left: auto;
 
       .tools__lang {
         &-list {
