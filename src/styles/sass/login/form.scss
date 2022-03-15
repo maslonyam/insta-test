@@ -1,61 +1,75 @@
 .login {
-  &__form {
+  &__login-form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+  }
 
-    .button {
+  .login-form {
+    &__button {
       margin-top: 40px;
     }
-  }
-}
 
-.country {
-  position: relative;
-
-  .trigger-value {
-    position: relative;
-    display: block;
-    width: 100%;
-    line-height: 1.3em;
+    &__country {
+      position: relative;
+    }
   }
 
-  .trigger-icon {
-    position: absolute;
-    right: 0;
-    margin-top: 5px;
-  }
-
-  .trigger-content {
-    box-sizing: border-box;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    max-height: 300px;
-    padding: 20px 50px;
-    background-color: $light-grey;
-    border-radius: 40px;
-
-    .country-input {
+  .country {
+    &__trigger-value {
+      position: relative;
+      display: block;
+      width: 100%;
+      line-height: 1.3em;
+  
+      .trigger-icon {
+        position: absolute;
+        right: 0;
+        margin-top: 5px;
+      }
+    }
+  
+    &__country-list {
+      box-sizing: border-box;
       position: absolute;
-      opacity: 0;
+      top: 80px;
+      left: 0;
+      display: none;
+      width: 100%;
+      background-color: $light-grey;
+      border-radius: 40px;
+    }
+  
+    .country-list {
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 200px;
+        padding: 20px 50px;
+        overflow-y: scroll;
+      }
+
+      &__input {
+        position: absolute;
+        opacity: 0;
+      }
     }
   }
 }
 
 @media (max-width: $tablet) {
   .login {
-    &__form {
+    &__login-form {
       gap: 15px;
       width: fit-content;
       margin: $margin-a;
       margin-top: 20vh;
-  
-      .button {
+    }
+
+    .login-form {
+      &__button {
         margin-top: 30px;
       }
     }

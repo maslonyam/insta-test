@@ -1,9 +1,16 @@
-.slider__controls {
+.controls {
   display: flex;
   justify-content: center;
   gap: 20px;
 
-  .controls__arrow {
+  &__pag {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    order: 2;
+  }
+
+  &__arrow {
     width: 30px;
     background-color: transparent;
     border: none;
@@ -18,6 +25,7 @@
 
     &.arrow-right {
       background-image: url("/src/assets/svg/arrow-right.svg");
+      order: 7;
     }
 
     &:hover {
@@ -26,7 +34,22 @@
     }
   }
 
-  .pag-label {
+  &__pag-input {
+    position: absolute;
+    opacity: 0;
+
+    &:hover + .controls__pag-label {
+      cursor: pointer;
+    }
+
+    &:checked + .controls__pag-label {
+      color: $blue;
+      border: 1px solid $blue;
+      border-radius: 50%;
+    }
+  }
+
+  &__pag-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,38 +59,63 @@
     border: 1px solid $light-grey;
     border-radius: 50%;
   }
+}
 
-  .controls__pag {
-    position: absolute;
-    opacity: 0;
+@media (max-width: $tablet) {
+  .controls {
+    flex-direction: column;
 
-    &:hover + .pag-label {
-      cursor: pointer;
+    &__pag {
+      order: 3;
+      gap: 10px;
     }
 
-    &:checked + .pag-label {
-      color: $blue;
-      border: 1px solid $blue;
-      border-radius: 50%;
+    &__arrow {
+      position: absolute;
+      top: 0;
+      display: block;
+      height: 100%;
+      width: calc(100% - 400px);
+      backdrop-filter: blur(5px);
+      filter: none;
+      background-image: url("/src/assets/svg/arrow-info.svg");
+      background-position: center;
+      background-color: rgba($white, 0.1);
+      background-size: 50px;
+
+      &.arrow-left {
+        display: none;
+        left: -20px;
+        background-image: url("/src/assets/svg/arrow-info.svg");
+        transform: scale(-1, 1);
+      }
+      
+      &.arrow-right {
+        order: 2;
+        right: -20px;
+        background-image: url("/src/assets/svg/arrow-info.svg");
+      }
+    }
+
+    &__pag-label {
+      width: 10px;
+      height: 10px;
+      background-color: $dark-grey;
+    }
+
+    &__pag-input { 
+      &:checked + .controls__pag-label {
+        background-color: $blue;
+      }
     }
   }
 }
 
-@media (max-width: $tablet) {
-  .slider__controls {
-    .controls__arrow {
-      display: none;
-    }
-
-    .pag-label {
-      width: 10px;
-      height: 10px;
-      background-color:   $dark-grey;
-    }
-
-    .controls__pag { 
-      &:checked + .pag-label {
-        background-color: $blue;
+@media (max-width: $mobile-max) {
+  .controls {
+    &__arrow {
+      &.arrow-right {
+        width: calc(100% - 280px);
       }
     }
   }

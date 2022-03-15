@@ -69,17 +69,17 @@
               <div class="lang__wrapper">
                 <div class="lang__lang-list lang-list trigger-content">
                   <input class="lang-list__input" type="radio" id="en" name="lang" checked/>
-                  <label class="lang-list__label text-elem text-elem_active" for="en">English</label>
+                    <label class="lang-list__label text-elem text-elem_active" for="en">English</label>
                   <input class="lang-list__input" type="radio" id="ru" name="lang"/>
-                  <label class="lang-list__label text-elem text-elem_active" for="ru">Russian</label>
+                    <label class="lang-list__label text-elem text-elem_active" for="ru">Russian</label>
                   <input class="lang-list__input"  type="radio" id="fr" name="lang"/>
-                  <label class="lang-list__label text-elem text-elem_active" for="fr">French</label>        
+                    <label class="lang-list__label text-elem text-elem_active" for="fr">French</label>        
                   <input class="lang-list__input" type="radio" id="de" name="lang"/>
-                  <label class="lang-list__label text-elem text-elem_active" for="de">Deutch</label>        
+                    <label class="lang-list__label text-elem text-elem_active" for="de">Deutch</label>        
                   <input class="lang-list__input"  type="radio" id="en2" name="lang"/>
-                  <label class="lang-list__label text-elem text-elem_active" for="en2">English</label>
+                    <label class="lang-list__label text-elem text-elem_active" for="en2">English</label>
                   <input class="lang-list__input" type="radio" id="ru2" name="lang"/>
-                  <label class="lang-list__label text-elem text-elem_active" for="ru2">Russian</label>
+                    <label class="lang-list__label text-elem text-elem_active" for="ru2">Russian</label>
                 </div>
               </div>
             </div>
@@ -106,35 +106,37 @@
       </div>
     </section>
     <section class="login" id="login">
-      <div class="close-icon">
-        <input class="close-icon__input" type="checkbox"/>
-        <span class="login-close"></span>
-        <span class="login-close"></span>
-      </div>
       <div class="container">
-        <header class="login-header">
-          <a class="link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+        <div class="login__close-icon close-icon">
+          <input class="close-icon__input" type="checkbox"/>
+          <span class="close-icon__parts"></span>
+          <span class="close-icon__parts"></span>
+        </div>
+        <header class="login__login-header">
+          <a class="login-header__link link logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
         </header>
         <h2 class="login__caption header header-2 text-elem">Registration form</h2>
-        <form class="login__form" id="login-form" action="#">
+        <form class="login__login-form login-form" id="login-form" action="#">
           <input type="text" class="login-form__input input text-elem" placeholder="Name">
-          <fieldset class="country login-form__input input">
-          <input class="login-form__input trigger text-elem" type="checkbox" id="country-trigger"/>
-          <label class="country-trigger__value trigger-value text-elem" for="country-trigger">Country<span class="trigger-icon"></span></label>
-          <div class="country-list trigger-content">
-            <input class="country-input" type="radio" id="usa" name="country" checked/>
-            <label class="country__label text-elem text-elem_active" for="usa">USA</label>
-            <input class="country-input" type="radio" id="rus" name="country"/>
-            <label class="country__label text-elem text-elem_active" for="rus">Russia</label>
-            <input class="country-input"  type="radio" id="fra" name="country"/>
-            <label class="country__label text-elem text-elem_active" for="fra">France</label>        
-            <input class="country-input" type="radio" id="ger" name="country"/>
-            <label class="country__label text-elem text-elem_active" for="ger">Germany</label>        
-            <input class="country-input"  type="radio" id="uk" name="country"/>
-            <label class="country__label text-elem text-elem_active" for="uk">UK</label>
-            <input class="country-input" type="radio" id="sp" name="country"/>
-            <label class="country__label text-elem text-elem_active" for="sp">Spain</label>
-          </div>
+          <fieldset class="login-form__country country login-form__input input">
+            <input class="login-form__input country__trigger trigger text-elem" type="checkbox" id="country-trigger"/>
+              <label class="country__trigger-value trigger-value text-elem" for="country-trigger">Country<span class="trigger-icon"></span></label>
+            <div class="country__country-list country-list trigger-content">
+              <div class="country-list__wrapper">
+                <input class="country-list__input" type="radio" id="usa" name="country" checked/>
+                  <label class="country-list__label text-elem text-elem_active" for="usa">USA</label>
+                <input class="country-list__input" type="radio" id="rus" name="country"/>
+                  <label class="country-list__label text-elem text-elem_active" for="rus">Russia</label>
+                <input class="country-list__input"  type="radio" id="fra" name="country"/>
+                  <label class="country-list__label text-elem text-elem_active" for="fra">France</label>        
+                <input class="country-list__input" type="radio" id="ger" name="country"/>
+                  <label class="country-list__label text-elem text-elem_active" for="ger">Germany</label>        
+                <input class="country-list__input"  type="radio" id="uk" name="country"/>
+                  <label class="country-list__label text-elem text-elem_active" for="uk">UK</label>
+                <input class="country-list__input" type="radio" id="sp" name="country"/>
+                <label class="country-list__label text-elem text-elem_active" for="sp">Spain</label>
+              </div>
+            </div>
           </fieldset>
           <input type="email" class="login-form__input input text-elem" placeholder="Email">
           <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
@@ -154,21 +156,23 @@
           <li class="slider__list-item slider-item list-item" id="slider-5"><img class="slider-item__content" src="./src/assets/img/products-5.png" alt="Product Specs Image" width="746" height="588"></li>
           <li class="slider__list-item slider-item list-item" id="slider-6"><img class="slider-item__content" src="./src/assets/img/products-6.png" alt="Product Specs Image" width="746" height="588"></li>
         </ul>
-        <div class="slider__controls">
+        <div class="slider__controls controls">
           <button class="controls__arrow arrow arrow-left"></button>
-          <input class="controls__pag" type="radio" name="slider-current" id="1" value="1" checked/>
-          <label class="pag-label text-elem" for="1">1</label>
-          <input class="controls__pag" type="radio" name="slider-current" id="2" value="2"/>
-          <label class="text-elem pag-label" for="2">2</label>
-          <input class="controls__pag" type="radio" name="slider-current" id="3" value="3"/>
-          <label class="text-elem pag-label" for="3">3</label>
-          <input class="controls__pag" type="radio" name="slider-current" id="4" value="4"/>
-          <label class="text-elem pag-label" for="4">4</label>
-          <input class="controls__pag" type="radio" name="slider-current" id="5" value="5"/>
-          <label class="text-elem pag-label" for="5">5</label>
-          <input class="controls__pag" type="radio" name="slider-current" id="6" value="6"/>
-          <label class="text-elem pag-label" for="6">6</label>
           <button class="controls__arrow arrow arrow-right"></button>
+          <div class="controls__pag">
+            <input class="controls__pag-input" type="radio" name="slider-current" id="1" value="1" checked/>
+            <label class="controls__pag-label text-elem" for="1">1</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="2" value="2"/>
+            <label class="controls__pag-label text-elem" for="2">2</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="3" value="3"/>
+            <label class="controls__pag-label text-elem" for="3">3</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="4" value="4"/>
+            <label class="controls__pag-label text-elem" for="4">4</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="5" value="5"/>
+            <label class="controls__pag-label text-elem" for="5">5</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="6" value="6"/>
+            <label class="controls__pag-label text-elem" for="6">6</label>
+          </div>
         </div>
       </div>
       </div>

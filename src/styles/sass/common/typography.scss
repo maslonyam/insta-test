@@ -42,6 +42,7 @@
 
     &.login__caption {
       font-weight: 500;
+      color: $black;
       font-size: $text-nav-form;
     }
   }
@@ -215,8 +216,8 @@
   .text-elem {
     font-size: $text-des;
 
-    &.pag-label {
-      font-size: 8px;
+    &.controls__pag-label {
+      font-size: 6px;
     }
 
     &.benefits-item__description {
