@@ -14,10 +14,10 @@
       display: flex;
       flex-direction: row;
 
-      .tools__lang_wrapper {
+      &_wrapper {
         position: absolute;
         top: 2.2rem;
-        right: -40%;
+        left: -25%;
         display: none;
         padding: 25px;
         background-color: rgba($black, 0.2);
@@ -87,8 +87,8 @@
 
       .search-input_wrapper {
         position: absolute;
-        top: 3rem;
-        right: 0;
+        top: 4.5rem;
+        left: 0;
         display: none;
         width: fit-content;
         height: fit-content;
@@ -123,6 +123,28 @@
         height: 20px;
         background-image: url("/src/assets/svg/search.svg");
         background-size: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: $desktop-max) {
+  .nav {
+    &__tools {
+      .tools__lang {
+        &_wrapper {
+          right: -35%;
+        }
+      }
+      .tools__search {
+        width: 15px;
+        height: 15px;
+        margin-right: 0;
+  
+        .search-input_wrapper {
+          left: -180px;
+          top: 2.5rem;
+        }
       }
     }
   }

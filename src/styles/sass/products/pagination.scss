@@ -4,7 +4,7 @@
   gap: 20px;
 
   .controls__arrow {
-    width: 20px;
+    width: 30px;
     background-color: transparent;
     border: none;
     background-size: cover;
@@ -30,7 +30,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 28px;
+    width: 30px;
+    height: 30px;
+    color: $dark-grey;
     border: 1px solid $light-grey;
     border-radius: 50%;
   }
