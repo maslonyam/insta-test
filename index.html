@@ -8,100 +8,102 @@
   <title>Company</title>
 </head>
 <body class="body">
-  <header class="header header-section">
-    <div class="header-container">
-      <div class="menu">
-        <input class="menu-button" id="menu-button" type="checkbox"/>
-      <label for="menu-button" class="menu-icon"></label>
-        </div>
-    <nav class="nav">
-      <a class="nav__logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
-      <ul class="nav-list list">
-        <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem text-elem_active" href="#products">Products</a>
-        </li>
-        <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem text-elem_active" href="#">Price</a>
-        </li>
-        <li class="nav-item list-item">
-          <a class="nav-item__link link text-elem text-elem_active" href="#security">Security</a>
-        </li>
-        <li class="nav-item list-item">
-          <input class="nav-item__button trigger" id="resources" type="checkbox"/>
-          <label class="nav-item__link trigger-value link text-elem text-elem_active" for="resources">Resources<span class="trigger-icon"></span></label>
-          <ul class="list-item__submenu list trigger-content">
-            <li class="submenu-item list-item">
-              <a class="submenu-item__link link text-elem_active" href="#about">
-                <h4 class="submenu-item__header header-4 header text-elem">About</h4>
-              </a>
-              <p class="submenu-item__info text-link text-elem">We aim to continuously refine our services in highly dynamic industry.</p>
-            </li>
-            <li class="submenu-item list-item">
-              <a class="submenu-item__link link text-elem_active" href="#">
-                <h4 class="submenu-item__header header-4 header text-elem">Careers</h4>
-              </a>
-              <p class="submenu-item__info text-link text-elem">Come join our team and help us build the future.</p>
-            </li>
-            <li class="submenu-item list-item">
-              <a class="submenu-item__link link text-elem_active" href="#">
-                <h4 class="submenu-item__header header-4 header text-elem">Support</h4>
-              </a>
-              <p class="submenu-item__info text-link text-elem">Answers to FAQs and how to contact our customer service team.</p>
-            </li>
-            <li class="submenu-item list-item">
-              <a class="submenu-item__link link text-elem_active" href="#">
-                <h4 class="submenu-item__header header-4 header text-elem">Blog</h4>
-              </a>
-              <p class="submenu-item__info text-link text-elem">Aroduct announcements, company updates, and industry perspectives.</p>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    <div class="nav__tools">
-      <div class="nav__tools_wrapper">
-      <button class="tools__login button">Log In</button>
-      <input class="settings-button" id="settings-button" type="checkbox">
-      <label class="settings-icon" for="settings-button"></label>
-      <div class="tools__settings">
-      <div class="tools__lang">
-        <input class="tools__lang-trigger trigger" id="lang-trigger" type="checkbox"/>
-        <label class="lang-trigger__value trigger-value text-elem text-elem_active" for="lang-trigger">English<span class="trigger-icon"></span></label>
-        <div class="tools__lang_wrapper">
-        <div class="tools__lang-list trigger-content">
-          <input class="lang-input" type="radio" id="en" name="lang" checked/>
-          <label class="lang__label text-elem text-elem_active" for="en">English</label>
-          <input class="lang-input" type="radio" id="ru" name="lang"/>
-          <label class="lang__label text-elem text-elem_active" for="ru">Russian</label>
-          <input class="lang-input"  type="radio"id="fr" name="lang"/>
-          <label class="lang__label text-elem text-elem_active" for="fr">French</label>        
-          <input class="lang-input" type="radio" id="de" name="lang"/>
-          <label class="lang__label text-elem text-elem_active" for="de">Deutch</label>        
-          <input class="lang-input"  type="radio" id="en2" name="lang"/>
-          <label class="lang__label text-elem text-elem_active" for="en2">English</label>
-          <input class="lang-input" type="radio" id="ru2" name="lang"/>
-          <label class="lang__label text-elem text-elem_active" for="ru2">Russian</label>
+  <header class="header-section">
+    <div class="header-section__container">
+      <div class="header-section__menu menu">
+        <input class="menu__button" id="menu-button" type="checkbox"/>
+        <label for="menu-button" class="menu__icon"></label>
+      </div>
+      <nav class="header-section__nav nav">
+        <a class="nav__logo-link logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+        <ul class="nav__nav-list list">
+          <li class="nav-list__nav-item nav-item list-item">
+            <a class="nav-item__link link text-elem text-elem_active" href="#products">Products</a>
+          </li>
+          <li class="nav-list__nav-item nav-item list-item">
+            <a class="nav-item__link link text-elem text-elem_active" href="#">Price</a>
+          </li>
+          <li class="nav-list__nav-item nav-item list-item">
+            <a class="nav-item__link link text-elem text-elem_active" href="#security">Security</a>
+          </li>
+          <li class="nav-list__nav-item nav-item list-item">
+            <input class="nav-item__button trigger" id="resources" type="checkbox"/>
+            <label class="nav-item__link trigger-value link text-elem text-elem_active" for="resources">Resources<span class="trigger-icon"></span></label>
+            <ul class="nav-item__submenu list trigger-content">
+              <li class="submenu__submenu-item submenu-item list-item">
+                <a class="submenu-item__link link text-elem_active" href="#about">
+                  <h4 class="submenu-item__header header-4 header text-elem">About</h4>
+                </a>
+                <p class="submenu-item__info text-link text-elem">We aim to continuously refine our services in highly dynamic industry.</p>
+              </li>
+              <li class="submenu__submenu-item  submenu-item list-item">
+                <a class="submenu-item__link link text-elem_active" href="#">
+                  <h4 class="submenu-item__header header-4 header text-elem">Careers</h4>
+                </a>
+                <p class="submenu-item__info text-link text-elem">Come join our team and help us build the future.</p>
+              </li>
+              <li class="submenu__submenu-item submenu-item list-item">
+                <a class="submenu-item__link link text-elem_active" href="#">
+                  <h4 class="submenu-item__header header-4 header text-elem">Support</h4>
+                </a>
+                <p class="submenu-item__info text-link text-elem">Answers to FAQs and how to contact our customer service team.</p>
+              </li>
+              <li class="submenu__submenu-item submenu-item list-item">
+                <a class="submenu-item__link link text-elem_active" href="#">
+                  <h4 class="submenu-item__header header-4 header text-elem">Blog</h4>
+                </a>
+                <p class="submenu-item__info text-link text-elem">Aroduct announcements, company updates, and industry perspectives.</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      <div class="nav__tools tools">
+        <div class="nav__tools-wrapper">
+          <button class="tools__login button">Log In</button>
+          <input class="tools__settings-button" id="settings-button" type="checkbox">
+          <label class="tools__settings-icon" for="settings-button"></label>
+          <div class="tools__settings settings">
+            <div class="settings__lang lang">
+              <input class="lang__trigger trigger" id="lang-trigger" type="checkbox"/>
+              <label class="lang__value trigger-value text-elem text-elem_active" for="lang-trigger">English<span class="trigger-icon"></span></label>
+              <div class="lang__wrapper">
+                <div class="lang__lang-list lang-list trigger-content">
+                  <input class="lang-list__input" type="radio" id="en" name="lang" checked/>
+                  <label class="lang-list__label text-elem text-elem_active" for="en">English</label>
+                  <input class="lang-list__input" type="radio" id="ru" name="lang"/>
+                  <label class="lang-list__label text-elem text-elem_active" for="ru">Russian</label>
+                  <input class="lang-list__input"  type="radio" id="fr" name="lang"/>
+                  <label class="lang-list__label text-elem text-elem_active" for="fr">French</label>        
+                  <input class="lang-list__input" type="radio" id="de" name="lang"/>
+                  <label class="lang-list__label text-elem text-elem_active" for="de">Deutch</label>        
+                  <input class="lang-list__input"  type="radio" id="en2" name="lang"/>
+                  <label class="lang-list__label text-elem text-elem_active" for="en2">English</label>
+                  <input class="lang-list__input" type="radio" id="ru2" name="lang"/>
+                  <label class="lang-list__label text-elem text-elem_active" for="ru2">Russian</label>
+                </div>
+              </div>
+            </div>
+            <div class="settings__search search">
+              <input class="search__button" id="search__button" type="checkbox"/>
+              <label for="search__button" class="search__icon"></label>
+              <div class="search__input-wrapper">
+                <span class="search__icon"></span>
+                <input class="search__input input text-elem" type="search" placeholder="Search">
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-      <div class="tools__search">
-        <input class="search-button" id="search-button" type="checkbox"/>
-        <label for="search-button" class="search-icon"></label>
-        <div class="search-input_wrapper">
-          <span class="search-icon"></span>
-          <input class="search-input input text-elem" type="search" placeholder="Search">
-        </div>
-      </div>
+      </nav>
     </div>
-  </div>
-    </nav>
-  </div>
   </header>
   <main class="main">
     <section class="intro" id="intro">
       <div class="container">
-      <h1 class="intro__header header-1 header text-elem">One app, all <br>things money</h1>
-      <p class="intro__description text-blue text-elem">Open a free account in minutes right from your phone, and make your money go further</p>
-      <button class="intro__button big-button button">Get Started <span class="intro__button-icon"></span></button>
+        <h1 class="intro__header header-1 header text-elem">One app, all <br>things money</h1>
+        <p class="intro__description text-blue text-elem">Open a free account in minutes right from your phone, and make your money go further</p>
+        <button class="intro__button big-button button">Get Started <span class="intro__button-icon"></span></button>
+      </div>
     </section>
     <section class="login" id="login">
       <div class="close-icon">
@@ -110,36 +112,35 @@
         <span class="login-close"></span>
       </div>
       <div class="container">
-      <header class="login-header">
-        <a class="link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
-      </header>
-      <h2 class="login__caption header header-2 text-elem">Registration form</h2>
-      <form class="login__form" id="login-form" action="#">
-        <input type="text" class="login-form__input input text-elem" placeholder="Name">
-        <fieldset class="country login-form__input input">
-        <input class="login-form__input trigger text-elem" type="checkbox" id="country-trigger"/>
-        <label class="country-trigger__value trigger-value text-elem" for="country-trigger">Country<span class="trigger-icon"></span></label>
-        <div class="country-list trigger-content">
-          <input class="country-input" type="radio" id="usa" name="country" checked/>
-          <label class="country__label text-elem text-elem_active" for="usa">USA</label>
-          <input class="country-input" type="radio" id="rus" name="country"/>
-          <label class="country__label text-elem text-elem_active" for="rus">Russia</label>
-          <input class="country-input"  type="radio"id="fra" name="country"/>
-          <label class="country__label text-elem text-elem_active" for="fra">France</label>        
-          <input class="country-input" type="radio" id="ger" name="country"/>
-          <label class="country__label text-elem text-elem_active" for="ger">Germany</label>        
-          <input class="country-input"  type="radio" id="uk" name="country"/>
-          <label class="country__label text-elem text-elem_active" for="uk">UK</label>
-          <input class="country-input" type="radio" id="sp" name="country"/>
-          <label class="country__label text-elem text-elem_active" for="sp">Spain</label>
-        </div>
-        </fieldset>
-        <input type="email" class="login-form__input input text-elem" placeholder="Email">
-        <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
-        <button class="login-form__button big-button button">Registration</button>
-      </form>
+        <header class="login-header">
+          <a class="link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
+        </header>
+        <h2 class="login__caption header header-2 text-elem">Registration form</h2>
+        <form class="login__form" id="login-form" action="#">
+          <input type="text" class="login-form__input input text-elem" placeholder="Name">
+          <fieldset class="country login-form__input input">
+          <input class="login-form__input trigger text-elem" type="checkbox" id="country-trigger"/>
+          <label class="country-trigger__value trigger-value text-elem" for="country-trigger">Country<span class="trigger-icon"></span></label>
+          <div class="country-list trigger-content">
+            <input class="country-input" type="radio" id="usa" name="country" checked/>
+            <label class="country__label text-elem text-elem_active" for="usa">USA</label>
+            <input class="country-input" type="radio" id="rus" name="country"/>
+            <label class="country__label text-elem text-elem_active" for="rus">Russia</label>
+            <input class="country-input"  type="radio" id="fra" name="country"/>
+            <label class="country__label text-elem text-elem_active" for="fra">France</label>        
+            <input class="country-input" type="radio" id="ger" name="country"/>
+            <label class="country__label text-elem text-elem_active" for="ger">Germany</label>        
+            <input class="country-input"  type="radio" id="uk" name="country"/>
+            <label class="country__label text-elem text-elem_active" for="uk">UK</label>
+            <input class="country-input" type="radio" id="sp" name="country"/>
+            <label class="country__label text-elem text-elem_active" for="sp">Spain</label>
+          </div>
+          </fieldset>
+          <input type="email" class="login-form__input input text-elem" placeholder="Email">
+          <input type="tel" class="login-form__input input text-elem" placeholder="Phone">
+          <button class="login-form__button big-button button">Registration</button>
+        </form>
       </div>
-    </div>
     </section>
     <section class="products section" id="products">
       <div class="container">

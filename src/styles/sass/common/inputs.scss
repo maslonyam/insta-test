@@ -2,7 +2,7 @@
   box-sizing: border-box;
   border: none;
 
-  &.search-input {
+  &.search__input {
     width: $input-sm-w;
     padding: 14px 38px;
     border-radius: 28px;
@@ -36,7 +36,7 @@
       padding: 16px 30px;
     }
 
-    &.search-input {
+    &.search__input {
       width: 120%;
       padding: 15px 30px;
     }

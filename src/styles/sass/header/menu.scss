@@ -1,17 +1,4 @@
 .nav-item {
-  &__button {
-    &:checked ~ .list-item__submenu {
-      display: grid;
-    }
-
-    &:checked ~ .nav-item__link {
-      .trigger-icon {
-        filter: brightness(0) saturate(100%) invert(44%) sepia(28%)
-          saturate(2209%) hue-rotate(202deg) brightness(95%) contrast(100%);
-      }
-    }
-  }
-
   &__link {
     .trigger-icon {
       filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(7%)
@@ -26,7 +13,20 @@
     }
   }
 
-  .list-item__submenu {
+  &__button {
+    &:checked ~ .nav-item__submenu {
+      display: grid;
+    }
+
+    &:checked ~ .nav-item__link {
+      .trigger-icon {
+        filter: brightness(0) saturate(100%) invert(44%) sepia(28%)
+          saturate(2209%) hue-rotate(202deg) brightness(95%) contrast(100%);
+      }
+    }
+  }
+
+  &__submenu {
     position: absolute;
     top: 50px;
     left: 50%;
@@ -45,25 +45,25 @@
     box-shadow: 0 0 10px rgba($dark-grey, 0.3);
     transform: translate(-50%, 0);
     backdrop-filter: blur(50px);
+  }
 
-    .submenu-item {
-      max-width: 345px;
+  .submenu-item {
+    max-width: 345px;
 
-      &__header {
-        transition: 0.3s;
-        &:hover::after {
-          position: relative;
-          display: inline-block;
-          width: 20px;
-          height: 10px;
-          margin-left: 10px;
-          vertical-align: middle;
-          background-image: url("/src/assets/svg/arrow-info.svg");
-          background-size: contain;
-          background-repeat: no-repeat;
-          filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(1272%) hue-rotate(215deg) brightness(98%) contrast(94%);
-          content: "";
-        }
+    &__header {
+      transition: 0.3s;
+      &:hover::after {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        margin-left: 10px;
+        vertical-align: middle;
+        background-image: url("/src/assets/svg/arrow-info.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(1272%) hue-rotate(215deg) brightness(98%) contrast(94%);
+        content: "";
       }
     }
   }
@@ -71,7 +71,7 @@
 
 @media (max-width: $desktop-min) {
   .nav-item {
-    .list-item__submenu {
+    &__submenu {
       grid-template-rows: repeat(4, auto);
       grid-template-columns: repeat(1, 345px);
     }
@@ -80,7 +80,7 @@
 
 @media (max-width: $tablet) {
   .nav-item {
-    .list-item__submenu {
+    &__submenu {
       position: static;
       z-index: 10;
       grid-template-columns: repeat(1, auto);
@@ -89,13 +89,13 @@
       box-shadow: none;
       transform: none;
       backdrop-filter: none;
+    }
 
-      .submenu-item {
-        max-width: fit-content;
+    .submenu-item {
+      max-width: fit-content;
 
-        &__info {
-          display: none;
-        }
+      &__info {
+        display: none;
       }
     }
   }
