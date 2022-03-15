@@ -25,23 +25,33 @@
     margin-bottom: 60px;
   }
 
-  &-benefits {
+  &__benefits-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
 
-  &-benefits__item {
-    display: flex;
-    gap: 26px;
+  .benefits-list {
+    &__item {
+      display: flex;
+      gap: 26px;
+    }
+  }
 
-    .benefits-item_wrapper {
+  .benefits-item {
+    &__info {
       max-width: 500px;
       padding: 50px 0 50px 50px;
+    }
 
-      .benefits-item__description {
-        width: 450px;
-      }
+    &__description {
+      width: 450px;
+    }
+
+    &__link {
+      width: fit-content;
+      background-color: transparent;
+      border: none;
     }
 
     &:nth-child(1n) {
@@ -56,7 +66,7 @@
     }
 
     &:nth-child(2n) {
-      .benefits-item_wrapper {
+      .benefits-item__info {
         order: 2;
       }
 
@@ -70,29 +80,25 @@
         -webkit-mask-size: contain;
       }
     }
-
-    
-
-    .link {
-      width: fit-content;
-      background-color: transparent;
-      border: none;
-    }
   }
 }
 
 @media (max-width: $desktop-min) {
   .about {
-
-    &-benefits {
+    &__benefits-list {
       gap: 50px;
+
     }
 
-    &-benefits__item {
-      flex-direction: column;
-      gap: 20px;
+    .benefits-list {
+      &__item {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
 
-      .benefits-item_wrapper {
+    .benefits-item {
+      &__info {
         order: 2;
         padding: 0;
       }
@@ -106,22 +112,26 @@
       margin-bottom: 30px;
     }
 
-    &-benefits {
+    &__benefits-list {
       width: 100%;
     }
+
+    .benefits-list {
+      &__item { 
+        align-items: center;
+      }
+    }
   
-    &-benefits__item {
-      align-items: center;
-      .benefits-item__image {
+    .benefits__item {
+      &__image {
         max-width: 476px;
         width: 100%;
         height: auto;
       }
-      .benefits-item_wrapper {
-        .benefits-item__description {
-          max-width: 476px;
-          width: fit-content;
-        }
+
+      &__description {
+        max-width: 476px;
+        width: fit-content;
       }
     }
   }
