@@ -5,12 +5,14 @@
     margin-bottom: 80px;
   }
 
-  &-benefits {
+  &__benefits-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
+  }
 
+  .benefits-list {
     &__item {
       position: relative;
       overflow: hidden;
@@ -53,44 +55,46 @@
           max-width: 265px;
         }
       }
+    }
+  }
 
-      .benefits-item__button {
-        display: none;
+  .benefits-item {
+    &__button {
+      display: none;
 
-        &:checked ~ .benefits-item__description {
-          transform: translate(0);
-        }
-
-        &:checked ~ .blur {
-          background-color: rgba($blue, 0.8);
-          backdrop-filter: blur(3px);
-          opacity: 1;
-        }
+      &:checked ~ .benefits-item__description {
+        transform: translate(0);
       }
 
-      .benefits-item__description {
-        transform: translate(-500px);
-        transition: 0.3s;
+      &:checked ~ .blur {
+        background-color: rgba($blue, 0.8);
+        backdrop-filter: blur(3px);
+        opacity: 1;
       }
+    }
 
-      .blur {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        opacity: 0;
-        transition: 0.3s;
-      }
+    &__description {
+      transform: translate(-500px);
+      transition: 0.3s;
+    }
+
+    .blur {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      opacity: 0;
+      transition: 0.3s;
     }
   }
 }
 
 @media (max-width: $desktop-mid) {
   .security {
-    &-benefits {
+    &__benefits-list {
       justify-content: center;
     }
   }
@@ -98,38 +102,42 @@
 
 @media (max-width: $tablet) {
   .security {
-    .header{
+    &__header{
       margin-bottom: 20px;
     }
-    &-benefits {
+
+    &__benefits-list {
       gap: 20px;
-      &__item {
-        flex: 1 0 100%;
-        border: none;
+    }
 
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(4) {
-          background-image: none;
-          background-color: transparent;
-        }
+    .benefits-item {
+      flex: 1 0 100%;
+      border: none;
 
-        &:nth-child(2n){
-          background-color: $light-grey;
-        }
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        background-image: none;
+        background-color: transparent;
+      }
 
-        .benefits-item__description {
-          margin-bottom: 0;
-          transform: translate(0);
-        }
+      &:nth-child(2n){
+        background-color: $light-grey;
+      }
 
-        .benefits-item_wrapper {
-          padding: 20px;
-          .benefits-item__link {
-            display: none;
-          }
-        }
+      &__description {
+        margin-bottom: 0;
+        transform: translate(0);
+      }
+
+      &__info {
+        height: fit-content;
+        padding: 20px;
+      }
+
+      &__link {
+        display: none;
       }
     }
   }
