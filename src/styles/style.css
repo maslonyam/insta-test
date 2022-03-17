@@ -963,11 +963,11 @@ html {
 
 .about .benefits-item:nth-child(1n) .benefits-item__image {
   mask: url("../assets/svg/mask-about.svg");
-  mask: url("../assets/svg/mask-about.svg");
+  -webkit-mask: url("../assets/svg/mask-about.svg");
   mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  webkit-mask-repeat: no-repeat;
   mask-size: 100%;
-  mask-size: contain;
+  webkit-mask-size: contain;
 }
 
 .about .benefits-item:nth-child(2n) .benefits-item__info {
@@ -977,11 +977,11 @@ html {
 .about .benefits-item:nth-child(2n) .benefits-item__image {
   order: 1;
   mask: url("../assets/svg/mask-about_revert.svg");
-  mask: url("../assets/svg/mask-about_revert.svg");
+  -webkit-mask: url("../assets/svg/mask-about_revert.svg");
   mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
   mask-size: 100%;
-  mask-size: contain;
+  -webkit-mask-size: contain;
 }
 
 @media (max-width: 1200px) {
@@ -1134,10 +1134,10 @@ html {
     linear-gradient(#ffffff, #ffffff);
   mask-composite: destination-out;
   mask-repeat: no-repeat;
-  mask: url("../assets/svg/mask.svg") 0/100% 100%,
+  -webkit-mask: url("../assets/svg/mask.svg") 0/100% 100%,
     linear-gradient(#ffffff, #ffffff);
-  mask-composite: destination-out;
-  mask-repeat: no-repeat;
+  -webkit-mask-composite: destination-out;
+  -webkit-mask-repeat: no-repeat;
 }
 
 .login .container {
@@ -1219,10 +1219,12 @@ html {
   .login::after {
     mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
       linear-gradient(#ffffff, #ffffff);
-    mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
-      linear-gradient(#ffffff, #ffffff);
-    mask-size: cover;
+    size: cover;
     mask-position: 60%;
+    -webkit-mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
+      linear-gradient(#ffffff, #ffffff);
+    -webkit-mask-size: cover;
+    -webkit-mask-position: 60%;
   }
 
   .login.open {
