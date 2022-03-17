@@ -32,6 +32,14 @@ menuButton.addEventListener("input", () => {
   })
 });
 
+// Open settings
+const settingsButton = document.querySelector(".tools__settings-button");
+const settings = document.querySelector(".tools__settings");
+
+settingsButton.addEventListener("input", () => {
+  settings.classList.toggle("open-settings");
+});
+
 // Change language 
 const langTrigger = document.querySelector(".lang__trigger");
 const langList = document.querySelector(".lang__wrapper");
