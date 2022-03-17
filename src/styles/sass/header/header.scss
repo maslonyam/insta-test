@@ -58,7 +58,7 @@
 
     &__menu {
       position: absolute;
-      z-index: 150;
+      z-index: 290;
       display: inline-block;
       width: 20px;
       right: 30px;
@@ -67,7 +67,19 @@
     .menu {
       &__button {
         position: absolute;
+        width: 25px;
+        height: 20px;
         opacity: 0;
+        transition: 0.5s;
+
+        &:checked ~ .menu__icon {
+          background-color: $blue;
+
+          &::after,
+          &::before {
+            background-color: $blue;
+          }
+        }
       }
 
       &__icon,
@@ -78,9 +90,11 @@
         height: 3px;
         background-color: $dark-grey;
         border-radius: 5px;
+        transition: 0.5s;
       }
 
       &__icon {
+        z-index: 290;
         position: relative;
       }
 
@@ -101,14 +115,18 @@
       position: fixed;
       z-index: 280;
       top: 0;
-      right: 0;
-      display: none;
+      right: -90vw;
       width: 90vw;
       height: 80vh;
       flex-direction: column;
       align-items: flex-start;
       gap: 30px;
       padding: 50px 20px;
+      transition: 0.5s;
+
+      &.open {
+        right: 0;
+      }
   
       &::before {
         position: absolute;

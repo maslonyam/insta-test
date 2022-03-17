@@ -1,4 +1,4 @@
-// Opening the modal window
+// Open the modal window
 const modalButtons = document.querySelectorAll(".button-modal");
 const modalWindow = document.querySelector("#login");
 
@@ -8,6 +8,14 @@ function openModalWindow() {
 
 modalButtons.forEach(button => {
   button.addEventListener("click", () => openModalWindow());
+});
+
+// Open burger menu
+const menuButton = document.querySelector(".menu__button");
+const menu = document.querySelector(".header-section__nav");
+
+menuButton.addEventListener("input", () => {
+  menu.classList.toggle("open");
 });
 
 // Change language 

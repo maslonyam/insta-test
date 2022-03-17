@@ -111,6 +111,7 @@
 
 @media (max-width: $tablet) {
   .login {
+    transform: translateX(0) translateY(100vh);
     background-size: 150%;
     background-position: 100% -30%;
     &::after {
@@ -120,6 +121,10 @@
         linear-gradient(#ffffff, #ffffff);
         -webkit-mask-size: cover;
         -webkit-mask-position: 60%;
+    }
+
+    &.open {
+      transform: translateY(0);
     }
 
     &__login-header {
