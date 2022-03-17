@@ -31,11 +31,11 @@
     height: 100%;
     background: $white;
     content: "";
-    mask: url("/src/assets/svg/mask.svg") 0/100% 100%,
+    mask: url("../assets/svg/mask.svg") 0/100% 100%,
       linear-gradient(#ffffff, #ffffff);
     mask-composite: destination-out;
     mask-repeat: no-repeat;
-    -webkit-mask: url("/src/assets/svg/mask.svg") 0/100% 100%,
+    -webkit-mask: url("../assets/svg/mask.svg") 0/100% 100%,
       linear-gradient(#ffffff, #ffffff);
     -webkit-mask-composite: destination-out;
     -webkit-mask-repeat: no-repeat;
@@ -114,9 +114,9 @@
     background-size: 150%;
     background-position: 100% -30%;
     &::after {
-      mask: url("/src/assets/svg/mask-top.svg") 0/100% 100%,
+      mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
         linear-gradient(#ffffff, #ffffff);
-      -webkit-mask: url("/src/assets/svg/mask-top.svg") 0/100% 100%,
+      -webkit-mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
         linear-gradient(#ffffff, #ffffff);
         -webkit-mask-size: cover;
         -webkit-mask-position: 60%;

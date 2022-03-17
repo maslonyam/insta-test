@@ -18,11 +18,11 @@
     background-repeat: no-repeat;
 
     &.arrow-left {
-      background-image: url("/src/assets/svg/arrow-left.svg");
+      background-image: url("../assets/svg/arrow-left.svg");
     }
 
     &.arrow-right {
-      background-image: url("/src/assets/svg/arrow-right.svg");
+      background-image: url("../assets/svg/arrow-right.svg");
       order: 7;
     }
 
@@ -84,14 +84,14 @@
 
       &.arrow-left {
         left: -20px;
-        background-image: url("/src/assets/svg/arrow-info.svg");
+        background-image: url("../assets/svg/arrow-info.svg");
         transform: scale(-1, 1);
       }
       
       &.arrow-right {
         order: 2;
         right: -20px;
-        background-image: url("/src/assets/svg/arrow-info.svg");
+        background-image: url("../assets/svg/arrow-info.svg");
       }
     }
 

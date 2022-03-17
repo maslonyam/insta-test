@@ -5,7 +5,7 @@
     z-index: -99;
     width: 100vw;
     height: 100vh;
-    background-image: url("/src/assets/img/main-back.png");
+    background-image: url("../assets/img/main-back.png");
     background-repeat: no-repeat;
     background-position: center 0;
     background-size: cover;
@@ -41,7 +41,7 @@
       width: 30px;
       height: 25px;
       margin-left: 15px;
-      background-image: url("/src/assets/svg/arrow-info.svg");
+      background-image: url("../assets/svg/arrow-info.svg");
       filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
         saturate(7500%) hue-rotate(116deg) brightness(109%) contrast(109%);
     }
