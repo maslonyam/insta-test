@@ -117,10 +117,12 @@
     &::after {
       mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
         linear-gradient(#ffffff, #ffffff);
+      mask-size: cover;
+      mask-position: 60%;
       -webkit-mask: url("../assets/svg/mask-top.svg") 0/100% 100%,
         linear-gradient(#ffffff, #ffffff);
-        -webkit-mask-size: cover;
-        -webkit-mask-position: 60%;
+      -webkit-mask-size: cover;
+      -webkit-mask-position: 60%;
     }
 
     &.open {

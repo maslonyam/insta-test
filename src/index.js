@@ -13,9 +13,23 @@ modalButtons.forEach(button => {
 // Open burger menu
 const menuButton = document.querySelector(".menu__button");
 const menu = document.querySelector(".header-section__nav");
+const body = document.querySelector(".body");
+const menuList = document.querySelector(".nav__nav-list");
 
 menuButton.addEventListener("input", () => {
+  menuButton.classList.toggle("open")
   menu.classList.toggle("open");
+  body.classList.toggle("overflow-disabled");
+
+  menuList.addEventListener("click", event => {
+    let link = event.target;
+    console.log(link)
+    if (link.classList.contains("plain-item") || link.classList.contains("submenu-item__header")) {
+      menuButton.classList.remove("open")
+      menu.classList.remove("open");
+      body.classList.remove("overflow-disabled");
+    }
+  })
 });
 
 // Change language 
@@ -69,6 +83,7 @@ const sliderList = document.querySelector(".slider__list");
 const slides = document.querySelectorAll(".slider-item");
 const buttons = document.querySelectorAll(".controls__arrow");
 const pagButtons = document.querySelectorAll(".controls__pag-input");
+const pagLabels = document.querySelectorAll(".controls__pag-label");
 
 // Slider - Counting the list offset
 function countOffset() {
@@ -144,7 +159,7 @@ buttons.forEach(button => {
         if (newPagButIndex > -1) {
           translateList(direction, countBlockWidth());
           setClasses(direction, newPagButIndex);
-          setPagination(curPagBut, pagButtons[newPagButIndex]);
+          
         }
       }
     } else {
@@ -155,10 +170,11 @@ buttons.forEach(button => {
         if (newPagButIndex < 6) {
           translateList(direction, countBlockWidth());
           setClasses(direction, newPagButIndex + 1);
-          setPagination(curPagBut, pagButtons[newPagButIndex]);
         }
       }
     }
+
+    setPagination(pagButtons[newPagButIndex]);
   });
 });
 
@@ -181,19 +197,23 @@ pagButtons.forEach(pagBut => {
       translateList("right", countBlockWidth() * slidesNum)
       setClasses("right", newValue)
       hideButton(newValue - 1)
-      setPagination(curPagBut, newPagBut);
+      setPagination(newPagBut);
     } else {
       slidesNum = curValue - newValue;
       setClasses("left", newValue - 1)
       translateList("left", countBlockWidth() * slidesNum)
       hideButton(newValue - 1)
-      setPagination(curPagBut, newPagBut);
+      setPagination(newPagBut);
     }    
     
   });
 })
 
-function setPagination(curPagBut, newPagBut) {
-  curPagBut.removeAttribute("checked")
+function setPagination(newPagBut) {
+  pagButtons.forEach(button => button.removeAttribute("checked"));
+  pagLabels.forEach(label => label.classList.remove("checked"));
   newPagBut.setAttribute("checked", "true");
+  const id = newPagBut.value;
+  console.log(document.querySelector(`[data-slide="${4}"`))
+  document.querySelector(`[data-slide="${id}"`).classList.toggle("checked");
 }
