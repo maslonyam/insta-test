@@ -23,7 +23,6 @@ menuButton.addEventListener("input", () => {
 
   menuList.addEventListener("click", event => {
     let link = event.target;
-    console.log(link)
     if (link.classList.contains("plain-item") || link.classList.contains("submenu-item__header")) {
       menuButton.classList.remove("open")
       menu.classList.remove("open");
@@ -74,7 +73,6 @@ benefitsButtons.forEach(button => {
   const id = button.getAttribute("id");
   const benefitsLink = document.querySelector(`[data-id="${id}"]`);
   const benefitsIcon = document.querySelector(`[data-id="${id}"] .benefit-link__icon`);
-  console.log(benefitsIcon)
   button.addEventListener("input", () => {
     if (button.checked) {
       benefitsLink.innerHTML = "<span class='benefit-link__icon checked'></span>";
@@ -158,7 +156,6 @@ buttons.forEach(button => {
     let curPagBut = document.querySelector(".controls__pag-input[checked]");
     let newPagButIndex;
     let direction;
-    console.log(curPagBut)
     if (event.target.classList.contains("arrow-left")) {
       direction = "left";
       if (Array.from(pagButtons).indexOf(curPagBut) !== 0) {
@@ -195,11 +192,9 @@ pagButtons.forEach(pagBut => {
   pagBut.addEventListener("click", event => {
     newPagBut = event.target;
     curPagBut = document.querySelector(".controls__pag-input[checked]");
-    console.log(curPagBut)
     let curValue = Number(curPagBut.value);
     let newValue = Number(newPagBut.value);
 
-    console.log(newValue, curValue)
     if (newValue > curValue) {
       slidesNum = newValue - curValue;
       translateList("right", countBlockWidth() * slidesNum)
@@ -222,6 +217,5 @@ function setPagination(newPagBut) {
   pagLabels.forEach(label => label.classList.remove("checked"));
   newPagBut.setAttribute("checked", "true");
   const id = newPagBut.value;
-  console.log(document.querySelector(`[data-slide="${4}"`))
   document.querySelector(`[data-slide="${id}"`).classList.toggle("checked");
 }
