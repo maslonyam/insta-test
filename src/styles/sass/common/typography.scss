@@ -36,13 +36,13 @@
   }
 
   &.header-2 {
-    font-weight: 600;
     color: $blue;
+    font-weight: 600;
     font-size: $header-2;
 
     &.login__caption {
-      font-weight: 500;
       color: $black;
+      font-weight: 500;
       font-size: $text-nav-form;
     }
   }
@@ -68,9 +68,10 @@
 }
 
 .text-elem {
+  margin-right: 0;
   font-size: $text-des;
   font-family: "Poppins", sans-serif;
-  margin-right: 0;
+
   .text-blue {
     color: $blue;
   }

@@ -19,8 +19,13 @@
       display: inline-block;
       padding: 5px 15px;
       margin-top: auto;
-    
-      &::after {
+      border-radius: 23px;
+
+      &.checked {
+        background-color: $blue;
+      }
+
+      .benefit-link__icon {
         position: relative;
         display: none;
         vertical-align: middle;
@@ -30,17 +35,21 @@
         background-image: url("/src/assets/svg/arrow-info.svg");
         background-size: contain;
         background-repeat: no-repeat;
-        content: "";
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(199deg) brightness(106%) contrast(102%);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+          hue-rotate(199deg) brightness(106%) contrast(102%);
+
+        &.checked {
+          display: inline-block;
+          transform: scale(-1, 1);
+        }
       }
-    
+
       &:hover {
         cursor: pointer;
         color: $white;
         background-color: $blue;
-        border-radius: 23px;
-      
-        &::after {
+
+        .benefit-link__icon {
           display: inline-block;
         }
       }
@@ -59,5 +68,5 @@
         max-width: 300px;
       }
     }
-  } 
+  }
 }

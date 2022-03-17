@@ -59,7 +59,7 @@
         </ul>
       <div class="nav__tools tools">
         <div class="nav__tools-wrapper">
-          <button class="tools__login button">Log In</button>
+          <button class="tools__login button button-modal">Log In</button>
           <input class="tools__settings-button" id="settings-button" type="checkbox">
           <label class="tools__settings-icon" for="settings-button"></label>
           <div class="tools__settings settings">
@@ -69,17 +69,17 @@
               <div class="lang__wrapper">
                 <div class="lang__lang-list lang-list trigger-content">
                   <input class="lang-list__input" type="radio" id="en" name="lang" checked/>
-                    <label class="lang-list__label text-elem text-elem_active" for="en">English</label>
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="English" for="en">English</label>
                   <input class="lang-list__input" type="radio" id="ru" name="lang"/>
-                    <label class="lang-list__label text-elem text-elem_active" for="ru">Russian</label>
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="Russian" for="ru">Russian</label>
                   <input class="lang-list__input"  type="radio" id="fr" name="lang"/>
-                    <label class="lang-list__label text-elem text-elem_active" for="fr">French</label>        
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="French" for="fr">French</label>        
                   <input class="lang-list__input" type="radio" id="de" name="lang"/>
-                    <label class="lang-list__label text-elem text-elem_active" for="de">Deutch</label>        
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="Deutch" for="de">Deutch</label>        
                   <input class="lang-list__input"  type="radio" id="en2" name="lang"/>
-                    <label class="lang-list__label text-elem text-elem_active" for="en2">English</label>
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="English" for="en2">English</label>
                   <input class="lang-list__input" type="radio" id="ru2" name="lang"/>
-                    <label class="lang-list__label text-elem text-elem_active" for="ru2">Russian</label>
+                    <label class="lang-list__label text-elem text-elem_active" data-lang="Russian" for="ru2">Russian</label>
                 </div>
               </div>
             </div>
@@ -102,15 +102,17 @@
       <div class="container">
         <h1 class="intro__header header-1 header text-elem">One app, all <br>things money</h1>
         <p class="intro__description text-blue text-elem">Open a free account in minutes right from your phone, and make your money go further</p>
-        <button class="intro__button big-button button">Get Started <span class="intro__button-icon"></span></button>
+        <button class="intro__button big-button button button-modal">Get Started <span class="intro__button-icon"></span></button>
       </div>
     </section>
     <section class="login" id="login">
       <div class="container">
         <div class="login__close-icon close-icon">
-          <input class="close-icon__input" type="checkbox"/>
-          <span class="close-icon__parts"></span>
-          <span class="close-icon__parts"></span>
+            <input class="close-icon__input button-modal" type="checkbox" id="close-icon"/>
+          <label for="close-icon">
+            <span class="close-icon__parts"></span>
+            <span class="close-icon__parts"></span>
+          </label>
         </div>
         <header class="login__login-header">
           <a class="login-header__link link logo-link" href="#"><img class="logo-image" src="./src/assets/svg/logo.svg" alt="Logo"></a>
@@ -148,30 +150,32 @@
       <div class="container">
       <h2 class="products__header header header-2 text-elem text-blue">Product Specs</h2>
       <div class="products__slider slider">
+        <div class="slider__wrapper">
         <ul class="slider__list list">
-          <li class="slider__list-item slider-item list-item" id="slider-1"><img class="slider-item__content" src="./src/assets/img/products-1.png" alt="Product Specs Image" width="746" height="588"></li>
-          <li class="slider__list-item slider-item list-item" id="slider-2"><img class="slider-item__content" src="./src/assets/img/products-2.png" alt="Product Specs Image" width="746" height="588"></li>
-          <li class="slider__list-item slider-item list-item" id="slider-3"><img class="slider-item__content" src="./src/assets/img/products-3.png" alt="Product Specs Image" width="746" height="588"></li>
-          <li class="slider__list-item slider-item list-item" id="slider-4"><img class="slider-item__content" src="./src/assets/img/products-4.png" alt="Product Specs Image" width="746" height="588"></li>
-          <li class="slider__list-item slider-item list-item" id="slider-5"><img class="slider-item__content" src="./src/assets/img/products-5.png" alt="Product Specs Image" width="746" height="588"></li>
-          <li class="slider__list-item slider-item list-item" id="slider-6"><img class="slider-item__content" src="./src/assets/img/products-6.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item current-slide" id="1"><img class="slider-item__content" src="./src/assets/img/products-1.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item next-slide" id="2"><img class="slider-item__content" src="./src/assets/img/products-2.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item" id="3"><img class="slider-item__content" src="./src/assets/img/products-3.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item" id="4"><img class="slider-item__content" src="./src/assets/img/products-4.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item" id="5"><img class="slider-item__content" src="./src/assets/img/products-5.png" alt="Product Specs Image" width="746" height="588"></li>
+          <li class="slider__list-item slider-item list-item" id="6"><img class="slider-item__content" src="./src/assets/img/products-6.png" alt="Product Specs Image" width="746" height="588"></li>
         </ul>
+        </div>
         <div class="slider__controls controls">
-          <button class="controls__arrow arrow arrow-left"></button>
+          <button class="controls__arrow arrow arrow-left" disabled></button>
           <button class="controls__arrow arrow arrow-right"></button>
           <div class="controls__pag">
-            <input class="controls__pag-input" type="radio" name="slider-current" id="1" value="1" checked/>
-            <label class="controls__pag-label text-elem" for="1">1</label>
-            <input class="controls__pag-input" type="radio" name="slider-current" id="2" value="2"/>
-            <label class="controls__pag-label text-elem" for="2">2</label>
-            <input class="controls__pag-input" type="radio" name="slider-current" id="3" value="3"/>
-            <label class="controls__pag-label text-elem" for="3">3</label>
-            <input class="controls__pag-input" type="radio" name="slider-current" id="4" value="4"/>
-            <label class="controls__pag-label text-elem" for="4">4</label>
-            <input class="controls__pag-input" type="radio" name="slider-current" id="5" value="5"/>
-            <label class="controls__pag-label text-elem" for="5">5</label>
-            <input class="controls__pag-input" type="radio" name="slider-current" id="6" value="6"/>
-            <label class="controls__pag-label text-elem" for="6">6</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-1" value="1" checked/>
+            <label class="controls__pag-label text-elem" data-slide="1" for="pag-1">1</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-2" value="2"/>
+            <label class="controls__pag-label text-elem" data-slide="2" for="pag-2">2</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-3" value="3"/>
+            <label class="controls__pag-label text-elem" data-slide="3" for="pag-3">3</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-4" value="4"/>
+            <label class="controls__pag-label text-elem" for="pag-4">4</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-5" value="5"/>
+            <label class="controls__pag-label text-elem" for="pag-5">5</label>
+            <input class="controls__pag-input" type="radio" name="slider-current" id="pag-6" value="6"/>
+            <label class="controls__pag-label text-elem" for="pag-6">6</label>
           </div>
         </div>
       </div>
@@ -186,7 +190,7 @@
           <div class="benefits-item__info">
             <h3 class="benefits-item__header header header-3 text-elem">Enjoy payday brought to you a day sooner</h3>
             <p class="benefits-item__description text-elem">Just switch your salary from your current bank to Revolut by simply sending a ready-made email</p>
-            <button class="benefits-item__link link text-link text-elem text-blue">Get started</button>
+            <button class="benefits-item__link link text-link text-elem text-blue button-modal">Get started<span class="benefit-link__icon"></span></button>
           </div>
           <img src="./src/assets/img/about-1.png" alt="About Image" class="benefits-item__image" width="476" height="472">
         </li>
@@ -194,7 +198,7 @@
           <div class="benefits-item__info">
             <h3 class="benefits-item__header header header-3 text-elem">No fees, just cash</h3>
             <p class="benefits-item__description text-elem">We won't take a penny of your hard earned cash, so you can fully enjoy your paycheck before everyone else!</p>
-            <button class="benefits-item__link link text-link text-elem text-blue">Get started</button>
+            <button class="benefits-item__link link text-link text-elem text-blue button-modal">Get started<span class="benefit-link__icon"></span></button>
           </div>
           <img src="./src/assets/img/about-2.png" alt="About Image" class="benefits-item__image" width="476" height="472">
         </li>
@@ -202,7 +206,7 @@
           <div class="benefits-item__info">
             <h3 class="benefits-item__header header header-3 text-elem">No hassle – we’ve got it covered</h3>
             <p class="benefits-item__description text-elem">Forget manual set-ups or confirmations. Once your salary's switched to Revolut, you'll just get your money a day early</p>
-            <button class="benefits-item__link link text-link text-elem text-blue">Get started</button>
+            <button class="benefits-item__link link text-link text-elem text-blue button-modal">Get started<span class="benefit-link__icon"></span></button>
           </div>
           <img src="./src/assets/img/about-3.png" alt="About Image" class="benefits-item__image" width="476" height="472">
         </li>
@@ -218,7 +222,7 @@
             <input class="benefits-item__button" type="checkbox" id="learn-1"/>
             <h3 class="benefits-item__header header header-3 text-elem">Enjoy payday brought to you a day sooner</h3>
             <p class="benefits-item__description text-elem">Just switch your salary from your current bank to Revolut by simply sending a ready-made email</p>
-          <label for="learn-1" class="benefits-item__link link text-link text-elem">Learn more</label>
+          <label for="learn-1" data-id="learn-1" class="benefits-item__link link text-link text-elem">Learn more<span class="benefit-link__icon"></span></label>
           </div>
         </li>
         <li class="benefits-list__item benefits-item list-item">
@@ -226,7 +230,7 @@
           <input class="benefits-item__button" type="checkbox" id="learn-2"/>
           <h3 class="benefits-item__header header header-3 text-elem">Learn more</h3>
           <p class="benefits-item__description text-elem">All of our website data is transmitted over encrypted Transport Layer Security (TLS) connections.</p>
-          <label for="learn-2" class="benefits-item__link link text-link text-elem">Learn more</label>
+          <label for="learn-2" data-id="learn-2"  class="benefits-item__link link text-link text-elem">Learn more<span class="benefit-link__icon"></span></label>
           <div class="blur"></div>
           </div>
         </li>
@@ -235,7 +239,7 @@
           <input class="benefits-item__button" type="checkbox" id="learn-3"/>
           <h3 class="benefits-item__header header header-3 text-elem">Internal Controls</h3>
           <p class="benefits-item__description text-elem">Multiple signatures are required to transfer cryptocurrency</p>
-          <label for="learn-3" class="benefits-item__link link text-link text-elem">Learn more</label>
+          <label for="learn-3" data-id="learn-3"  class="benefits-item__link link text-link text-elem">Learn more<span class="benefit-link__icon"></span></label>
           <div class="blur"></div>
           </div>
         </li>
@@ -244,13 +248,13 @@
           <input class="benefits-item__button" type="checkbox" id="learn-4"/>
           <h3 class="benefits-item__header header header-3 text-elem">Crypto Security</h3>
           <p class="benefits-item__description text-elem">All private keys are stored and managed there for their lifetime.</p>
-          <label for="learn-4" class="benefits-item__link link text-link text-elem">Learn more</label>
+          <label for="learn-4" data-id="learn-4"  class="benefits-item__link link text-link text-elem">Learn more<span class="benefit-link__icon"></span></label>
           </div>
         </li>
       </ul>
       </div>
     </section>
   </main>
-  
+  <script async type="module" src="src/index.js"></script>
 </body>
 </html>

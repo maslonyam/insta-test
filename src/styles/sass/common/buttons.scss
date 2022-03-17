@@ -15,9 +15,9 @@
   }
 
   &:hover {
-    cursor: pointer;
     box-shadow: 0 0 10px rgba($blue, 0.5);
     transform: scale(1.03);
+    cursor: pointer;
   }
 }
 
